@@ -173,14 +173,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>Java使用注解配置MySQL信息报错：<br>第一个坑：</p>
-<img src="/.com//04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/keng1.jpg" class>
+<img src="/2020/04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/keng1.jpg" class="">
 <p>解决方案：</p>
-<img src="/.com//04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/pokeng1.jpg" class>
+<img src="/2020/04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/pokeng1.jpg" class="">
 <p>已上图为例，在utf8后面接上&amp;amp；serverTimezone=UTC</p>
 <p>第二个坑：</p>
-<img src="/.com//04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/keng2.jpg" class>
+<img src="/2020/04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/keng2.jpg" class="">
 <p>对实体“xxx”的应用必须以“；”分隔符结尾<br>解决方案：<br>例如数据库url是这样的：</p>
-<img src="/.com//04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/pokeng2.jpg" class>
+<img src="/2020/04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/pokeng2.jpg" class="">
 <p>将’&amp;’改写为”&amp;amp；“,即jdbc:mysql://localhost:3306/xsgl?charaterEncoding=utf8&amp;amp；serverTimezone=UTC</p>
 
       
