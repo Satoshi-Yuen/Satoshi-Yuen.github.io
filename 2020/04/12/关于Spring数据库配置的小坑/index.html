@@ -6,19 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>sTsu横空出世 | Hexo</title>
+  <title>关于Spring数据库配置的小坑 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Satoshi’s blogThis is a new legend！  From now on,sTsu Blog正式营业!">
+  <meta name="description" content="Java使用注解配置MySQL信息报错：第一个坑：解决方案：已上图为例，在utf8后面接上&amp;serverTimezone&#x3D;UTC 第二个坑：对实体“xxx”的应用必须以“;”分隔符结尾解决方案：例如数据库url是这样的：将’&amp;’改写为’&amp;’,即jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;xsgl?charaterEncoding&#x3D;utf8&amp;serverT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sTsu横空出世">
-<meta property="og:url" content="http://yoursite.com/2020/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:title" content="关于Spring数据库配置的小坑">
+<meta property="og:url" content="http://yoursite.com/2020/04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Satoshi’s blogThis is a new legend！  From now on,sTsu Blog正式营业!">
+<meta property="og:description" content="Java使用注解配置MySQL信息报错：第一个坑：解决方案：已上图为例，在utf8后面接上&amp;serverTimezone&#x3D;UTC 第二个坑：对实体“xxx”的应用必须以“;”分隔符结尾解决方案：例如数据库url是这样的：将’&amp;’改写为’&amp;’,即jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;xsgl?charaterEncoding&#x3D;utf8&amp;serverT">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-09T05:42:16.000Z">
-<meta property="article:modified_time" content="2020-04-12T06:41:30.256Z">
+<meta property="og:image" content="http://yoursite.com/.com//keng1.jpg">
+<meta property="og:image" content="http://yoursite.com/.com//pokeng1.jpg">
+<meta property="og:image" content="http://yoursite.com/.com//keng2.jpg">
+<meta property="og:image" content="http://yoursite.com/.com//pokeng2.jpg">
+<meta property="article:published_time" content="2020-04-12T07:32:17.000Z">
+<meta property="article:modified_time" content="2020-04-12T08:42:15.949Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="SpringJDBC">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/.com//keng1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,29 +161,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客文章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-关于Spring数据库配置的小坑" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      sTsu横空出世
+      关于Spring数据库配置的小坑
     </h1>
   
 
         
-        <a href="/2020/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2020-04-09T05:42:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-09</time>
+        <a href="/2020/04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/" class="archive-article-date">
+  	<time datetime="2020-04-12T07:32:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to Satoshi’s blog<br>This is a new legend！</p>
-<hr>
-<p>From now on,sTsu Blog正式营业!</p>
+        <p>Java使用注解配置MySQL信息报错：<br>第一个坑：<br><img src="/.com//keng1.jpg" alt="keng1"><br>解决方案：<br><img src="/.com//pokeng1.jpg" alt="pokeng1"><br>已上图为例，在utf8后面接上&amp;serverTimezone=UTC</p>
+<p>第二个坑：<br><img src="/.com//keng2.jpg" alt="keng2"><br>对实体“xxx”的应用必须以“;”分隔符结尾<br>解决方案：<br>例如数据库url是这样的：<br><img src="/.com//pokeng2.jpg" alt="pokeng2"><br>将’&amp;’改写为’&amp;’,即jdbc:mysql://localhost:3306/xsgl?charaterEncoding=utf8&amp;serverTimezone=UTC</p>
 
       
 
@@ -206,6 +212,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringJDBC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -256,7 +277,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +291,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/12/%E5%85%B3%E4%BA%8ESpring%E6%95%B0%E6%8D%AE%E5%BA%93%E9%85%8D%E7%BD%AE%E7%9A%84%E5%B0%8F%E5%9D%91/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          关于Spring数据库配置的小坑
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2020/04/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">sTsu横空出世</div>
       <i class="icon-circle-right"></i>
     </a>
   
