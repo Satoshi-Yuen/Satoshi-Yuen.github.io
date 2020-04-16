@@ -6,23 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>构建基础的hexo博客框架 | Satoshiの部屋</title>
+  <title>BGP--IBGP水平分割规则 | Satoshiの部屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="许多人在学习的时候都会做下笔记，忘记的时候可以看看，温故而知新，而很多人都想着在博客上写，记录不止是知识，还有点滴，同时也有人想搭建一个自己的博客（感觉很酷，顺带也可以装逼），以hexo博客框架为基础的博客就十分友好地诞生了！搭建简单，而且后期也容易维护，小鲜肉我在各路搜索资料搭建好后，总结出了些些心得，现在就开始简单地喷下口水：小鲜肉本人使用的是windows系统，所以都是基于windows来搭">
+  <meta name="description" content="BGP路由器通过一个IBGP对等体学习的路由时，这个路由器不能再把这条学习到的路由通告给其他任何IBGP对等体。 但是水平分割规则会带来一个问题：一个AS的IBGP路由器无法学习到某条去往另一个AS的路由时，若它的另一个IBGP对等体想与另一个AS的路由器进行通信，由于没有学习到路由，所以不能够通信。解决以上问题的方法：在一个AS内部实现IBGP对等体全互联（弊端：当AS内的BGP路由器数量巨多时">
 <meta property="og:type" content="article">
-<meta property="og:title" content="构建基础的hexo博客框架">
-<meta property="og:url" content="http://yoursite.com/2020/04/13/%E6%9E%84%E5%BB%BA%E5%9F%BA%E7%A1%80%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/index.html">
+<meta property="og:title" content="BGP--IBGP水平分割规则">
+<meta property="og:url" content="http://yoursite.com/2020/04/16/BGP-IBGP%E6%B0%B4%E5%B9%B3%E5%88%86%E5%89%B2%E8%A7%84%E5%88%99/index.html">
 <meta property="og:site_name" content="Satoshiの部屋">
-<meta property="og:description" content="许多人在学习的时候都会做下笔记，忘记的时候可以看看，温故而知新，而很多人都想着在博客上写，记录不止是知识，还有点滴，同时也有人想搭建一个自己的博客（感觉很酷，顺带也可以装逼），以hexo博客框架为基础的博客就十分友好地诞生了！搭建简单，而且后期也容易维护，小鲜肉我在各路搜索资料搭建好后，总结出了些些心得，现在就开始简单地喷下口水：小鲜肉本人使用的是windows系统，所以都是基于windows来搭">
+<meta property="og:description" content="BGP路由器通过一个IBGP对等体学习的路由时，这个路由器不能再把这条学习到的路由通告给其他任何IBGP对等体。 但是水平分割规则会带来一个问题：一个AS的IBGP路由器无法学习到某条去往另一个AS的路由时，若它的另一个IBGP对等体想与另一个AS的路由器进行通信，由于没有学习到路由，所以不能够通信。解决以上问题的方法：在一个AS内部实现IBGP对等体全互联（弊端：当AS内的BGP路由器数量巨多时">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/04/13/%E6%9E%84%E5%BB%BA%E5%9F%BA%E7%A1%80%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/clonefalse.jpg">
-<meta property="article:published_time" content="2020-04-12T17:01:19.000Z">
-<meta property="article:modified_time" content="2020-04-14T07:37:13.838Z">
+<meta property="article:published_time" content="2020-04-16T09:10:18.000Z">
+<meta property="article:modified_time" content="2020-04-16T09:23:45.889Z">
 <meta property="article:author" content="Satoshi Yuen">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="hexo博客框架">
+<meta property="article:tag" content="华为HCNP">
+<meta property="article:tag" content="BGP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/04/13/%E6%9E%84%E5%BB%BA%E5%9F%BA%E7%A1%80%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/clonefalse.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Satoshiの部屋" type="application/atom+xml">
   
@@ -162,33 +160,28 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-构建基础的hexo博客框架" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-BGP-IBGP水平分割规则" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      构建基础的hexo博客框架
+      BGP--IBGP水平分割规则
     </h1>
   
 
         
-        <a href="/2020/04/13/%E6%9E%84%E5%BB%BA%E5%9F%BA%E7%A1%80%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2020-04-12T17:01:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
+        <a href="/2020/04/16/BGP-IBGP%E6%B0%B4%E5%B9%B3%E5%88%86%E5%89%B2%E8%A7%84%E5%88%99/" class="archive-article-date">
+  	<time datetime="2020-04-16T09:10:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>许多人在学习的时候都会做下笔记，忘记的时候可以看看，温故而知新，而很多人都想着在博客上写，记录不止是知识，还有点滴，同时也有人想搭建一个自己的博客（感觉很酷，顺带也可以装逼），以hexo博客框架为基础的博客就十分友好地诞生了！搭建简单，而且后期也容易维护，小鲜肉我在各路搜索资料搭建好后，总结出了些些心得，现在就开始简单地喷下口水：<br>小鲜肉本人使用的是windows系统，所以都是基于windows来搭建：<br>（1）下载node.js<br>下载网址：nodejs.org<br>默认选项安装，安装好后可以打开cmd，使用node -v查看版本号(npm -v查看包管理器的版本)。<br>（2）下载git<br>到git官网去下载windows版本就OK啦，安装的时候可以默认选项安装，当然，你也可以选择，毕竟萝卜青菜各有所爱。</p>
-<a id="more"></a>
-<p>（3）镜像源安装<br>（至于这个是干嘛用的的呢，自行百度吧，这里就不吹水了），用npm安装cnpm：npm insatll -g cnpm –registry=<a href="http://registry.npm.taobao.org，安装好了可以用cnpm、cnpm" target="_blank" rel="noopener">http://registry.npm.taobao.org，安装好了可以用cnpm、cnpm</a> -v查看相关信息。<br>（4）建文件夹<br>在电脑中建立一个文件夹用来存放关于博客的文件的文件夹，文件夹右键点击git bash here，进入到git，或者也可以先进入git bash然后在建立文件夹（博客的所有操作都在git bash上进行）。<br>（5）安装hexo博客框架<br>命令：cnpm install -g hexo -cli（hexo -v查看hexo框架的相关信息）。<br>（6）初始化博客<br>命令：hexo init，初始化之后会显示<a href="http://localhost:4000，在浏览器上输入localhost:4000即可查看搭建的hexo博客原始形态。">http://localhost:4000，在浏览器上输入localhost:4000即可查看搭建的hexo博客原始形态。</a></p>
-<p>到了这个地步，基本框架就已经搞定了，可以启动博客（hexo s）开始写博客（hexo n “article title”），在hexo n之后，会帮你在/source/带下划线的posts中创建一个”article title”.md的文件，用vim打开来写就完事了。<br>不过你写完上传到博客，因为你的博客只是供本地浏览，别人是不知道你写了什么鬼，也不知道你有博客（进而无法装逼），如果你想着自娱自乐，那可以关掉这篇博客写你的博客，如果想装逼，可以接着看我吹水：</p>
-<p>将博客部署到Github（全球最大的同性交友网站），重要的是此举免费，免费，免费：<br>（1）注册Github账号<br>必须得有，没有去搞，说完。<br>（2）创建一个repository<br>关键步骤：repository name一栏的填写格式：账号昵称+.github.io，勾选“Initialize this repository with a README”，点确认，完事。<br>（3）安装git插件：<br>在你的blog文件夹下部署一个git的插件，主要是将你博客文件夹的东西扔到repository里，命令：cnpm insatll –save hexo-deployer-git<br>（4）改内容<br>在你创建的blog文件夹下，有一个带下划线config.yml的文件，vim打开，拖到文件底部，找到Deployment，补充以下内容：<br>type：git<br>repo：创建的repository地址<br>branch：master<br>（5）身份验证<br>这个好理解啊，你通过git进入repository肯定要查你身份证啊，所以这个时候你执行部署到github上的命令（hexo d）时，会弹出一个status的验证，你需要输入一下命令进行验证：<br>git config –global user.email “github账号绑定的邮箱”<br>git config –global user.name “github账号的昵称”<br>完成验证后，再次输入hexo d进行部署，部署完后回到github的repository，点击code，就会看到无端端多了团东西，那是博客文件夹里的东西。</p>
-<p>好了，部署到Github上的步骤就告一段落了~<br>但是，你以为完了吗，其实差不多完了，容我在喷多些口水：<br>在浏览器上输入你的仓库名（”账户昵称+.github.io”），就可以访问到你部署到github的博客，其他人输入你的仓库名也就可以看到你的博客，成功装逼，要是你嫌这个仓库名太low，没关系，花些小钱买个域名进行装逼升华，何乐而不为！<br>另外，有些朋友在克隆时可能会遇到以下问题：<br><img src="/2020/04/13/%E6%9E%84%E5%BB%BA%E5%9F%BA%E7%A1%80%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/clonefalse.jpg" alt><br>一般提升缓存就完事了，命令如下：git config –global http.postBuffer +缓存大小</p>
-<p>口水喷完了，打游戏去了，至于你看到你的博客为什么还是空空如也，自己耍去吧<br>以上。</p>
+        <p>BGP路由器通过一个IBGP对等体学习的路由时，这个路由器不能再把这条学习到的路由通告给其他任何IBGP对等体。</p>
+<p>但是水平分割规则会带来一个问题：一个AS的IBGP路由器无法学习到某条去往另一个AS的路由时，若它的另一个IBGP对等体想与另一个AS的路由器进行通信，由于没有学习到路由，所以不能够通信。<br>解决以上问题的方法：在一个AS内部实现IBGP对等体全互联（弊端：当AS内的BGP路由器数量巨多时，可能会给网络和设备带来较大的负担）。</p>
 
       
 
@@ -223,11 +216,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">华为HCNP</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">hexo博客框架</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">BGP</a>
         		</li>
       		
 		</ul>
@@ -283,7 +276,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/13/%E6%9E%84%E5%BB%BA%E5%9F%BA%E7%A1%80%E7%9A%84hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/16/BGP-IBGP%E6%B0%B4%E5%B9%B3%E5%88%86%E5%89%B2%E8%A7%84%E5%88%99/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -297,18 +290,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/13/MySQL%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-set%EF%BC%88%E9%9B%86%E5%90%88%EF%BC%89%E4%B8%8Eenum%EF%BC%88%E6%9E%9A%E4%B8%BE%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/04/16/BGP-%E8%B7%AF%E7%94%B1%E5%99%A8%E9%BB%91%E6%B4%9E%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8ABGP%E5%90%8C%E6%AD%A5%E8%A7%84%E5%88%99/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          MySQL数据类型---set（集合）与enum（枚举）
+          BGP--路由器黑洞问题以及BGP同步规则
         
       </div>
     </a>
   
   
-    <a href="/2020/04/12/Java%E4%B8%AD%E7%9A%84%E4%B8%80%E4%BA%9B%E5%87%BD%E6%95%B0%E7%94%A8%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java中的一些函数用法（持续更新）</div>
+    <a href="/2020/04/16/%E5%8D%8E%E4%B8%BAHCNP-BGP%E5%91%A8%E8%BE%B9%E5%8F%8A%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">华为HCNP--BGP周边及工作原理</div>
       <i class="icon-circle-right"></i>
     </a>
   
