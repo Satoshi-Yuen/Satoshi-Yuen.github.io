@@ -47,7 +47,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/21-2.JPG">
 <meta property="og:image" content="http://yoursite.com/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/6.JPG">
 <meta property="article:published_time" content="2020-04-19T07:40:17.000Z">
-<meta property="article:modified_time" content="2020-04-20T09:41:18.997Z">
+<meta property="article:modified_time" content="2020-04-22T15:13:46.089Z">
 <meta property="article:author" content="Satoshi Yuen">
 <meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
@@ -218,6 +218,9 @@
 <p>外部样式表（实际开发中的通用方法）：<br>在网页外新建一个.css文件，这个文件专门存放css样式，在网页内部通过link标签调用css文件，例如：<br>&#8195;编写css文件：<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/3.JPG" alt><br>&#8195;调用css文件：<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/4.JPG" alt><br>&#8195;显示效果：<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/5.JPG" alt></p>
 <p>CSS注释符号：/* */</p>
 <p>选择器与声明块：<br>选择器：指定选中哪一个标签；常用的几类选择器：<br>&#8195;（1）元素选择器：根据标签元素选中指定元素，用法例如：p{}、div{}、span{}等<br>&#8195;（2）id选择器：根据元素id选中元素，用法：#+id名{}，例如：#red{}等<br>&#8195;（3）类选择器：根据元素的class属性值选中元素，用法：.+class属性名{}，例如：.red{}<br>&#8195;&#8195;一个元素可以指定多个class属性，但属性值之间应使用空格隔开<br>&#8195;（4）通用选择器：#{}，表示适配于所有元素标签；<br>&#8195;（5）交集选择器：选中同时含有多个条件的元素；用法：选择器1选择器2选择器3…{}（注意：若含有元素选择器，应该将元素选择器写在第一位），例如：<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/7.JPG" alt><br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/8.JPG" alt><br>&#8195;（6）并集选择器（选择器分组）：同时选择多个选择器的元素：用法：选择器1，选择器2，选择器3，…{}，例如：<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/9.JPG" alt><br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/10.JPG" alt><br>&#8195;（7）关系选择器：<br>&#8195;&#8195;几个要了解的小概念：<br>&#8195;&#8195;&#8195;1）父元素：直接包含子元素的元素；<br>&#8195;&#8195;&#8195;2）子元素：直接被父元素包含的元素；<br>&#8195;&#8195;&#8195;3）祖先元素：直接或间接包含子元素的元素；<br>&#8195;&#8195;&#8195;4）后代元素：直接或间接被包含在祖先元素的元素；<br>&#8195;&#8195;&#8195;5）兄弟元素：父元素相同的元素；<br>栗子如下：<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/11.JPG" alt><br>&#8195;&#8195;1.子元素选择器：选择特定父元素下的特定子元素，用法：父元素 &gt; 子元素；<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/12.JPG" alt><br>&#8195;&#8195;2.后代元素选择器：选择特定祖先元素下的特定后代元素，用法：父元素 后代元素；<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/13.JPG" alt><br>&#8195;&#8195;3.兄弟元素选择器：选择某个兄弟元素的下一个兄弟元素，用法：指定兄弟元素 + 下一个兄弟元素；<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/14.JPG" alt><br>&#8195;&#8195;&#8195;指定兄弟元素 ~ 下一个兄弟元素 可以选择某个兄弟元素的下一个兄弟元素的所有同名兄弟元素；<br>&#8195;&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/15.JPG" alt><br>&#8195;&#8195;&#8195;&#8195;看下网页效果：<br>&#8195;&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/16.JPG" alt><br>&amp;#8195（8）属性选择器：选择含有特定属性的选择器，有多种用法：<br>&#8195;&#8195;1）[元素][属性名]：表示选择元素中含有这个属性的特定元素（不写元素名表示所有）例如：<br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/17.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/17-1.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/17-2.JPG" alt><br>&#8195;&#8195;2）[元素][属性名=属性值]：表示选择元素中含有这个特定属性值的特定元素（不写元素名表示所有）例如：<br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/18.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/18-1.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/18-2.JPG" alt><br>&#8195;&#8195;2）[元素][属性名^=属性值]：表示选择元素中以这个属性值开头的特定元素（不写元素名表示所有）例如：<br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/19.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/19-1.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/19-2.JPG" alt><br>&#8195;&#8195;2）[元素][属性名$=属性值]：表示选择元素中以这个属性值结尾的特定元素（不写元素名表示所有）例如：<br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/20.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/20-1.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/20-2.JPG" alt><br>&#8195;&#8195;2）[元素][属性名*=属性值]：表示选择元素中只含有或部分含有这个属性值的特定元素（不写元素名表示所有）例如：<br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/21.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/21-1.JPG" alt><br>&#8195;&#8195;&#8195;<img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/21-2.JPG" alt><br>声明块：指定元素样式；一个声明对应一个名值对，名值对：名:值;<br><img src="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/6.JPG" alt></p>
+<p>伪类（不存在的特殊的类）：<br>描述一个元素的特殊状态；以整个元素为单位来操作，应配合元素使用，使用格式：以“:”开头，例如：:first-child（第一个元素）、:last-child（最后一个元素）、nth-child（第n个元素）等；<br>关于超链接的伪类：<br>:link（表示没有被访问过的超链接）、:visited（表示已经被访问的超链接）、:hover（鼠标移动到超链接标题是显示的效果）、:active（鼠标点击超链接时显示的效果）；</p>
+<p>伪元素：<br>描述一个元素当中的内容的特殊状态；以一个元素中的内容为整体进行操作，使用格式：以“::”开头，例如：::first-letter（表示首字母）、::first-line（表示首行）、::selection（表示选中的内容）、::before（表示内容开始的位置）、::after（内容结束的位置）等；<br>&#8195;&#8195;其中::before和::after必须结合content属性来使用，而被before和after包围的内容在用鼠标进行选取时会被选到，而before和after的内容则不会被选中；</p>
+<p>选择器权重：<br>各类型选择器优先级：<br>&#8195;内联样式：1000（数量级1000）<br>&#8195;id选择器：100（数量级100）<br>&#8195;类与伪类选择器：10（数量级10）<br>&#8195;元素选择器：1（数量级1）<br>&#8195;通配选择器：0<br>&#8195;继承的样式：无优先级<br>在比较优先级时，需要将所有选择器的优先级值相加再比较，值越大越优<br>&#8195;&#8195;注意：（1）分组选择器需要单独计算；（2）累加和不能超过最大的数量级；（3）优先级相同时，优先选择下方的选择器；<br>在某个选择器的样式后面添加“!important”时，样式就会得到最高的优先级（比内联样式还高）</p>
 
       
 
@@ -475,23 +478,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Web开发</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SpringAOP</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -499,7 +490,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">elicpse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">版本控制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Web开发</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -507,15 +510,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">SpringJDBC</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">版本控制</a>
+                <a href="javascript:void(0)" class="js-tag color5">SpringAOP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
