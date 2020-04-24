@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>版本控制究竟是啥子？ | Satoshiの部屋</title>
+  <title>版本控制与Git的风流史 | Satoshiの部屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="这是个人对版本控制的一些思想总结，纯属个人见解&amp;#8195;版本控制系统就是记录一个修改的记录或历史版本，方便日后找回原来想要的记录的系统。&amp;#8195;版本控制系统分为集中式版本控制系统、分布式版本控制系统。集中式的主流是svn，而分布式的主要是git，由于分布式的强盛，集中式的基本阵亡。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="版本控制究竟是啥子？">
+<meta property="og:title" content="版本控制与Git的风流史">
 <meta property="og:url" content="http://yoursite.com/2020/04/16/%E5%85%B3%E4%BA%8Egit/index.html">
 <meta property="og:site_name" content="Satoshiの部屋">
 <meta property="og:description" content="这是个人对版本控制的一些思想总结，纯属个人见解&amp;#8195;版本控制系统就是记录一个修改的记录或历史版本，方便日后找回原来想要的记录的系统。&amp;#8195;版本控制系统分为集中式版本控制系统、分布式版本控制系统。集中式的主流是svn，而分布式的主要是git，由于分布式的强盛，集中式的基本阵亡。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-16T13:49:13.000Z">
-<meta property="article:modified_time" content="2020-04-23T08:50:39.112Z">
+<meta property="article:modified_time" content="2020-04-24T05:42:46.189Z">
 <meta property="article:author" content="Satoshi Yuen">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="版本控制">
@@ -167,7 +167,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      版本控制究竟是啥子？
+      版本控制与Git的风流史
     </h1>
   
 
@@ -184,9 +184,10 @@
 <a id="more"></a>
 <p>集中式版本控制系统：<br>&#8195;&#8195;简单来说就是，所有客户端都连接一个服务器，这个服务器记录各个客户端的项目及操作记录。<br>优点：<br>&#8195;（1）记录比较集中，便于管理；<br>&#8195;（2）因为每次记录的都是与前一次的差异，需要的内存空间相对较小。<br>缺点：<br>&#8195;（1）若服务器出现宕机或炸了，所存放的历史记录全都无法提取还原，简单来说就是，跪了。</p>
 <p>分布式版本控制系统：<br>&#8195;&#8195;简而言之，每一台客户机都是一台服务器，历史操作、项目、记录什么的都放在本地客户机，就算是你的机子瓦特了，也可以通过别人的机子找到还原你之前做的历史版本。<br>优点：<br>&#8195;（1）存放的历史版本记录什么的得到了保障，不容易因服务器的崩坏而导致无法还原；<br>&#8195;（2）通过github远程仓库可以进行跨地域、时间、人力进行开发。<br>缺点：<br>&#8195;（1）相比于集中式，分布式需要的内存空间相对较大。</p>
-<p>区域：<br>&#8195;工作区：你做项目写文件的一个区域，说白了就是一个放你工作文件的文件夹；<br>&#8195;暂存区：对工作区的每一次操作之后的新版本所存放的区域，只是暂时存放，不会提交到版本库；<br>&#8195;版本库：存放你所提交的文件项目的最新版本区域；</p>
+<p>接下来就是Git的某些来龙去脉：<br>区域：<br>&#8195;工作区：你做项目写文件的一个区域，说白了就是一个放你工作文件的文件夹；<br>&#8195;暂存区：对工作区的每一次操作之后的新版本所存放的区域，只是暂时存放，不会提交到版本库；<br>&#8195;版本库：存放你所提交的文件项目的最新版本区域；</p>
 <p>对象：<br>&#8195;Git对象：<br>&#8195;&#8195;（1）本质是一个键值对，以键值对的对象存放在git的版本库当中，对象类型为blob；<br>&#8195;&#8195;（2）git对象只存放数据的内容而没有存放文件名，每一次存放的仅仅是修改后的内容以及新内容对应的一个哈希名（键名），通过哈希名（键名）可以查看内容；<br>&#8195;&#8195;（3）一个Git对象不代表一个版本，仅仅是代表一个文件版本因为Git对象只存内容不存文件名，所以有些Git对象没有在原来基础上新增内容后的Git对象的更新内容，纵然Git对象有很多，但并不是都是项目的一个版本。<br>&#8195;树对象：<br>&#8195;&#8195;（1）一个树对象对应一个项目快照，树对象也存放在git版本库<br>&#8195;&#8195;&#8195;建立树对象流程：<br>&#8195;&#8195;&#8195;1）创建的文件首先要为此文件创建一个git对象，生成对应的一个哈希；<br>&#8195;&#8195;&#8195;2）为此文件的首个版本创建一个暂存区（update-index）；<br>&#8195;&#8195;&#8195;3）这个时候就有了项目的一个快照，如果保存这个版本到git版本库中，执行命令（git write-tree）生成树对象，此时版本库中就含有工作区上你的这个项目的快照（一个树对象）；<br>&#8195;提交对象：这是用户对树对象的注释注解和树对象封装的一个对象，这个才是完整意义上的一个项目版本。</p>
 <p>git操作基本流程：<br>&#8195;（1）创建项目的工作目录，对工作目录进行修改；<br>&#8195;（2）将项目放入暂存区（git add命令）；<br>&#8195;&#8195;执行流程：1）在版本库中生成git对象；2）将git对象也放入暂存区中；<br>&#8195;（3）将项目现阶段的最终版本放入版本库（git commit -m命令）；<br>&#8195;&#8195;执行流程：1）版本库中的git对象与暂存区中的git对象作比较后暂存区的git对象变为树对象放入版本库；2）版本库中提取出对应的树对象并与注释内容一把封装为一个提交对象；3）将提交对象放入版本库<br>一个完整的项目版本提交后，暂存区内的内容不会被删除（git对象），而版本库当中也应该有提交项目所生成的所有git对象、一个树对象和一个提交对象。</p>
+<p>git工作目录下文件有两种状态：（1）已跟踪（git add命令执行后）；（2）未跟踪；<br>已跟踪又分为3种状态：（1）已修改；（2）已暂存（git add命令执行后）；（3）已提交（git commit命令执行后）；</p>
 
       
 
@@ -453,11 +454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -469,10 +470,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">html</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Web开发</a>
               </li>
              
@@ -481,7 +478,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">html</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">elicpse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,14 +499,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">版本控制</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">elicpse</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
