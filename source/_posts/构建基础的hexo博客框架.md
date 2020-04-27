@@ -38,8 +38,8 @@ tags:
 &#8195;&#8195;branch：master
 （5）身份验证
 &#8195;这个好理解啊，你通过git进入repository肯定要查你身份证啊，所以这个时候你执行部署到github上的命令（hexo d）时，会弹出一个status的验证，你需要输入一下命令进行验证：
-&#8195;&#8195;git config –global user.email “github账号绑定的邮箱”
-&#8195;&#8195;git config –global user.name “github账号的昵称”
+&#8195;&#8195;git config &#8211;&#8211;global user.email “github账号绑定的邮箱”
+&#8195;&#8195;git config &#8211;&#8211;global user.name “github账号的昵称”
 &#8195;完成验证后，再次输入hexo d进行部署，部署完后回到github的repository，点击code，就会看到无端端多了团东西，那是博客文件夹里的东西。
 
 好了，部署到Github上的步骤就告一段落了~
@@ -47,7 +47,7 @@ tags:
 &#8195;在浏览器上输入你的仓库名（”账户昵称+.github.io”），就可以访问到你部署到github的博客，其他人输入你的仓库名也就可以看到你的博客，成功装逼，要是你嫌这个仓库名太low，没关系，花些小钱买个域名进行装逼升华，何乐而不为！
 另外，有些朋友在克隆时可能会遇到以下问题：
 ![](clonefalse.jpg)
-一般提升缓存就完事了，命令如下：git config –global http.postBuffer +缓存大小
+一般提升缓存就完事了，命令如下：git config &#8211;&#8211;global http.postBuffer +缓存大小
 
 &#8195;口水喷完了，打游戏去了，至于你看到你的博客为什么还是空空如也，自己耍去吧
 &#8195;以上。
