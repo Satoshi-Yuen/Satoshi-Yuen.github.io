@@ -16,7 +16,7 @@
 <meta property="og:description" content="这里记录下的都是些关于git的基本操作命令：低阶命令：&amp;#8195;clean：清除屏幕内容；&amp;#8195;ll： 查看当前目录下的文件详细信息；&amp;#8195;find：查看当前目录文件；&amp;#8195;find 目录名 -type f：查看指定目录下的文件(具体到目录下的子文件夹下的文件)；&amp;#8195;echo “xxx” &gt; 文件名：将内容”xxx”写入文件当中，相当于创建了一个文件；&amp;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-18T08:10:20.000Z">
-<meta property="article:modified_time" content="2020-04-24T05:36:57.188Z">
+<meta property="article:modified_time" content="2020-04-27T09:10:13.851Z">
 <meta property="article:author" content="Satoshi Yuen">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
@@ -180,7 +180,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>这里记录下的都是些关于git的基本操作命令：<br>低阶命令：<br>&#8195;clean：清除屏幕内容；<br>&#8195;ll： 查看当前目录下的文件详细信息；<br>&#8195;find：查看当前目录文件；<br>&#8195;find 目录名 -type f：查看指定目录下的文件(具体到目录下的子文件夹下的文件)；<br>&#8195;echo “xxx” &gt; 文件名：将内容”xxx”写入文件当中，相当于创建了一个文件；<br>&#8195;vim 文件名(带有扩展名):用vim编辑器打开<br>&#8195;&#8195;按i进入编辑；按esc退出编辑；<br>&#8195;&#8195;在非编辑模式下，按:set nu可以显示行数；<br>&#8195;&#8195;退出编辑后按:wq即为保存文件并退出vim编辑器；<br>&#8195;&#8195;退出编辑后还可以按:q!强制退出但不保存文件内容；<a id="more"></a><br>&#8195;git hash-object -w 文件路径名：将文件内容以键值对的git对象保存到git版本库当中；<br>&#8195;git cat-file -p 哈希名：根据键值查看被压缩的详细内容；<br>&#8195;git cat-file -t 哈希名：根据哈希名查看存储的对象类型；<br>&#8195;git update-index &#8211;&#8211;add &#8211;&#8211;cacheinfo 100644/100755/120000 \哈希名 文件名：为文件的首个版本创建一个暂存区<br>&#8195;&#8195;&#8211;&#8211;add：文件不在暂存区时，首次加入需要下上&#8211;&#8211;add，若文件内容已被修改而暂存区中已有文件则不需要加&#8211;&#8211;add，内容被修改后的文件会覆盖原来在暂存区的文件；<br>&#8195;&#8195;&#8211;&#8211;cacheinfo：添加的文件在git数据库中，而不在当前目录，所以需要添加&#8211;&#8211;cacheinfo；<br>&#8195;&#8195;100644：普通文件；100755：可执行文件；120000：符号链接<br>&#8195;git ls-files -s：查看暂存区的文件；<br>&#8195;git write-tree：生成树对象；<br>&#8195;git read-tree &#8211;&#8211;prefix=bak 哈希：读取第一个树对象；<br>&#8195;echo “注释” | git commit-tree 哈希：提交对象，就是将用户对树对象的注解注释与树对象一并封装提交到git版本库当中；</p>
-<p>高阶命令：<br>&#8195;git init：初始化仓库；<br>&#8195;git add 路径：将工作为项目提交到暂存区（执行流程：在版本库中生成git对象-&gt;将git对象也放入暂存区中）；<br>&#8195;git commit -m “注释内容”：创建提交对象并放入版本库中（执行流程：暂存区中的git对象变为树对象放入版本库-&gt;版本库中对应的树对象与注释内容一把封装为一个提交对象-&gt;将提交对象放入版本库）<br>&#8195;git status：查看文件状态；<br>&#8195;git deff：查看已修改且没有放入暂存的文件修改内容；<br>&#8195;git diff &#8211;&#8211;cache/git diff &#8211;&#8211;staged：查看已修改且放入暂存区的文件的修改内容；<br>&#8195;git commit：在执行git add命令后，为树对象添加注释内容，这是跳转到一个类似于vim编辑器的界面，让用户添加内容（回车后树对象与注释封装为提交对象提交到版本库）；<br>&#8195;git commit -a -m “注释内容”：跳过存入暂存区（git add命令）放入git版本库；<br>&#8195;mv 文件原名 文件新名：修改文件名；<br>&#8195;git log：查看文件历史记录；<br>&#8195;git log &#8211;&#8211;pretty=online：查看文件历史记录（漂亮的）；<br>&#8195;git log &#8211;&#8211;online：查看文件历史记录（简略的）；</p>
+<p>高阶命令：<br>&#8195;git init：初始化仓库；<br>&#8195;git status：查看文件状态；<br>&#8195;git add 路径：将工作为项目提交到暂存区（执行流程：在版本库中生成git对象-&gt;将git对象也放入暂存区中）；<br>&#8195;git commit -m “注释内容”：创建提交对象并放入版本库中（执行流程：暂存区中的git对象变为树对象放入版本库-&gt;版本库中对应的树对象与注释内容一把封装为一个提交对象-&gt;将提交对象放入版本库）<br>&#8195;git deff：查看已修改且没有放入暂存的文件修改内容；<br>&#8195;git diff &#8211;&#8211;cache/git diff &#8211;&#8211;staged：查看已修改且放入暂存区的文件的修改内容；<br>&#8195;git commit：在执行git add命令后，为树对象添加注释内容，这是跳转到一个类似于vim编辑器的界面，让用户添加内容（回车后树对象与注释封装为提交对象提交到版本库）；<br>&#8195;git commit -a -m “注释内容”：跳过存入暂存区（git add命令）放入git版本库；<br>&#8195;mv 文件原名 文件新名：修改文件名（仅仅是从工作目录中删除文件，这个操作并没有提交到git数据库中，需要另外执行add和commit命令）；<br>&#8195;rm 文件名：删除文件（仅仅是从工作目录中删除文件，这个操作并没有提交到git数据库中，需要另外执行add和commit命令）；<br>&#8195;git log：查看文件历史记录；<br>&#8195;git log &#8211;&#8211;pretty=online：查看文件历史记录（漂亮的）；<br>&#8195;git log &#8211;&#8211;online：查看文件历史记录（简略的）；<br>&#8195;git rm 文件名：从工作区中删除文件且将记录提交到git数据库中；<br>&#8195;git mv 文件原名 文件新名：修改文件名且将记录提交到git数据库中；<br>&#8195;分支部分：<br>&#8195;git branch 分支名：创建分支；<br>&#8195;git branch：查看所以分支；<br>&#8195;git branch -D：强制删除分支；<br>&#8195;git checkout 分支名：切换分支；<br>&#8195;git branch -v：查看分支最后的提交对象；<br>&#8195;git branch 分支名 提交对象的哈希：创建新分支并使得这个新分支指向某个提交对象；<br>&#8195;git log &#8211;&#8211;oneline &#8211;&#8211;decorate &#8211;&#8211;graph &#8211;&#8211;all：查看项目分支历史；<br>&#8195;git config &#8211;&#8211;global alias.命令别名 命令：为长或难记的命令设置别名；</p>
 
       
 
@@ -443,11 +443,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">CSS</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -459,23 +459,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Web开发</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SpringAOP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">html</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">elicpse</a>
+                <a href="javascript:void(0)" class="js-tag color1">Web开发</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SpringAOP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -488,6 +484,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">版本控制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">elicpse</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -6,18 +6,34 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Web开发 | Satoshiの部屋</title>
+  <title>CSS基础玩意SP-盒子模型的那些事 | Satoshiの部屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="handsome">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Satoshiの部屋">
-<meta property="og:url" content="http://yoursite.com/tags/Web%E5%BC%80%E5%8F%91/index.html">
+  <meta name="description" content="盒子模型： 一、简单介绍CSS将页面中的元素设置为一个矩形盒子，组成部分：内容区、边框、内边距、外边距；&amp;#8195;（1）内容区：由width、height两个属性设置大小；&amp;#8195;（2）边框(border)：设置边框至少要设置边框的宽度(border-width)、颜色(border-color)、样式(border-style)，&amp;#8195;&amp;#8195;&amp;#8195;宽度(bord">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS基础玩意SP-盒子模型的那些事">
+<meta property="og:url" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/index.html">
 <meta property="og:site_name" content="Satoshiの部屋">
-<meta property="og:description" content="handsome">
+<meta property="og:description" content="盒子模型： 一、简单介绍CSS将页面中的元素设置为一个矩形盒子，组成部分：内容区、边框、内边距、外边距；&amp;#8195;（1）内容区：由width、height两个属性设置大小；&amp;#8195;（2）边框(border)：设置边框至少要设置边框的宽度(border-width)、颜色(border-color)、样式(border-style)，&amp;#8195;&amp;#8195;&amp;#8195;宽度(bord">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/1.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/2.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/3.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/4.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/5.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/6.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/6-1.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/7.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/7-1.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/8.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/8-1.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/9.JPG">
+<meta property="og:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/9-1.JPG">
+<meta property="article:published_time" content="2020-04-27T04:25:17.000Z">
+<meta property="article:modified_time" content="2020-04-27T08:22:36.214Z">
 <meta property="article:author" content="Satoshi Yuen">
-<meta property="article:tag" content="satory、html基础、CSS基础、BGP、satoshi部屋、Spring、Java、反正就是帅">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/1.JPG">
   
     <link rel="alternative" href="/atom.xml" title="Satoshiの部屋" type="application/atom+xml">
   
@@ -157,114 +173,186 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CSS-盒子模型的那些事" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/17/%E5%85%B3%E4%BA%8EMyBatis/" class="archive-article-date">
-  	<time datetime="2020-04-17T09:10:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/17/%E5%85%B3%E4%BA%8EMyBatis/">MyBatis小入门</a>
+    <h1 class="article-title" itemprop="name">
+      CSS基础玩意SP-盒子模型的那些事
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" class="archive-article-date">
+  	<time datetime="2020-04-27T04:25:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>盒子模型：<br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/1.JPG" alt></p>
+<p>一、简单介绍<br>CSS将页面中的元素设置为一个矩形盒子，组成部分：内容区、边框、内边距、外边距；<br>&#8195;（1）内容区：由width、height两个属性设置大小；<br>&#8195;（2）边框(border)：设置边框至少要设置边框的宽度(border-width)、颜色(border-color)、样式(border-style)，<br>&#8195;&#8195;&#8195;宽度(border-width)：可以指定四个不同方向设置不同的边框宽度，<br>&#8195;&#8195;&#8195;&#8195;若border-width后面跟四个值，则表示上、右、下、左的顺时针顺序个方向一种样式；<br>&#8195;&#8195;&#8195;&#8195;若border-width后面跟三个值，则表示上、左右、下的模式设置（简单而言就是上下个一种样式、左右同一种样式）<br>&#8195;&#8195;&#8195;&#8195;若border-width后面跟两个值，则表示上下、左右的模式设置（简单而言就是上下同一种样式，左右同一种样式）；<br>&#8195;&#8195;&#8195;&#8195;若border-width后面跟一个值，则表示上、下、左、右都是同一种样式。<br>&#8195;&#8195;&#8195;&#8195;边框还有一个border-xxx-width的属性设置，这个可以单独指定某个边框位置进行设置，xxx包括top（顶部）、left（左侧）、right（右侧）、bottom（底层）；<br>&#8195;&#8195;&#8195;边框设置的缩写形式：border:宽度 样式 颜色（宽度颜色样式的排列方式不定，可以变化，但三者之间需要空格隔开）；</p>
+<a id="more"></a>
+<p>&#8195;（3）内边距(padding)：内容区与边框间的距离<br>&#8195;&#8195;&#8195;内边距同样可以设置四个方向：padding-top、padding-right、padding-bottom、padding-left；<br>&#8195;&#8195;&#8195;padding设置也可以简写，简写规则与border-width相同；<br>&#8195;（4）外边距(margin)：不影响可见框大小，但会影响盒子位置<br>&#8195;&#8195;&#8195;外边距也可以设置四个方向：margin-top、margin-right、margin-bottom、margin-left；<br>&#8195;&#8195;&#8195;margin设置同样可以简写，简写规则与padding相同；<br>盒子大小（可见框）=内容区+边距+内边距<br>盒子简单例子及效果图：<br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/2.JPG" alt><br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/3.JPG" alt></p>
+<p>二、盒子模型水平方向上的布局<br>若一个子元素在其父元素下（子元素是在父元素的内容区中存在的），其在水平方向上的布局必须满足一下关系：<br>左外边距+左边距+左内边距+内容区+右内边距+右边距+右外边距=父元素设置的宽度<br>当等式不成立时，其中的要点：<br>&#8195;&#8195;（1）没有设置auto：浏览器会自动补全缺少的宽度(过渡约束)，这个时候会将右外边距补全；<br>&#8195;&#8195;（2）已设置auto：7中宽度中只有左外边距、内容区、右外边距可以设置为auto，当这3个中的某个宽度被设置为auto时，这个设置了auto的宽度就会被自动补全为缺少的那部分宽度；根据这可以设置为auto的3中宽度，又有以下要点：<br>&#8195;&#8195;&#8195;&#8195;1）当左外边距或右外边距和内容区宽度被设置为auto时，等式缺少的宽度就会自动归到内容区那部分；<br>&#8195;&#8195;&#8195;&#8195;2）当三种宽度都被设置为auto时，内容区宽度自动被补全到缺少的那部分宽度，而左右外边距自动为0；<br>&#8195;&#8195;&#8195;&#8195;3）当左右外边距为auto，而内容区宽度已被设置时，左右外边距对半分缺少的那部分宽度，这个时候显示的效果就是内容区居中的效果，但前提是内容区宽度必须已经设置，否则内容区宽度就会被自动补全为缺少的宽度，而左右外边距自动为0；<br>简单例子及效果：<br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/4.JPG" alt><br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/5.JPG" alt></p>
+<p>三、盒子模型垂直方向上的布局<br>父元素高度一旦被设置则是固定的，若没有被设置，则父元素高度会根据子元素高度的变化而变化；<br>当父元素高度被确定而子元素高度大于父元素高度而发生溢出时的解决方式：<br>通过在父元素当中设置overflow属性来解决，其中几个常用属性值介绍：<br>（1）visible：属性的默认值，设置及效果如下：<br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/6.JPG" alt><br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/6-1.JPG" alt><br>（2）hidden：隐藏溢出的部分，设置及效果如下：<br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/7.JPG" alt><br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/7-1.JPG" alt><br>（3）scroll：生成两个滚动条，可以通过拉动滚动条来查看溢出的内容，设置及效果如下：<br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/8.JPG" alt><br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/8-1.JPG" alt><br>（4）auto：根据实际情况生成滚动条，设置及效果如下：<br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/9.JPG" alt><br><img src="/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/9-1.JPG" alt><br>另外，还可以通过overflow-x、overflow-y两个属性对父元素的水平方向和垂直方向进行设置；</p>
+<p>三、外边距重叠问题<br>相邻元素且在垂直方向上的外边距重叠，主要存在以下两种元素的重叠问题：<br>（1）兄弟元素：<br>&#8195;&#8195;当元素之间的相邻的垂直外边距均为正值时，取两者之间的较大者；<br>&#8195;&#8195;当元素之间的相邻的垂直外边距为一正一负时，取两者之间的和；<br>&#8195;&#8195;当元素之间的相邻的垂直外边距均为负值时，取两者之间的绝对值较大者；<br>&#8195;&#8195;&#8195;&#8195;（发生在兄弟元素之间的重叠在开发当中一般不作处理）<br>（2）父子元素：<br>&#8195;&#8195;给子元素设置外边距会传递给父元素；<br>&#8195;&#8195;子元素设置外边距会改变页面布局；</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>多谢你！得闲一起吹水！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Web开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MyBatis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">CSS</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/27/CSS-%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/14/Spring%E9%80%9A%E7%9F%A5%E7%B1%BB%E5%9E%8B%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-04-14T04:15:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/19/CSS%E5%9F%BA%E7%A1%80%E7%8E%A9%E6%84%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS基础玩意（持续更新）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/14/Spring%E9%80%9A%E7%9F%A5%E7%B1%BB%E5%9E%8B%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/">Spring通知类型执行过程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Web开发</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringAOP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -287,9 +375,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
