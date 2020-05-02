@@ -59,3 +59,6 @@ tags:
 &#8195;git stash apply 栈名（例如：stash@{number}）：重新应用已保存在栈里的修改；
 &#8195;git stash drop 栈名（例如：stash@{number}）：删除指定的栈；
 &#8195;git stash pop：应用栈的储藏并删掉栈；
+&#8195;git checkout &#8211;&#8211;filename：在工作区中撤销文件的修改；
+&#8195;git reset HEAD filename：撤回保存到暂存区的修改；
+&#8195;git commit &#8211;&#8211;amend：修改提交到版本库的文件的注释并覆盖修改之前的注释；
