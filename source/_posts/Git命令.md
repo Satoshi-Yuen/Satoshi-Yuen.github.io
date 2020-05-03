@@ -62,3 +62,7 @@ tags:
 &#8195;git checkout &#8211;&#8211;filename：在工作区中撤销文件的修改；
 &#8195;git reset HEAD filename：撤回保存到暂存区的修改；
 &#8195;git commit &#8211;&#8211;amend：修改提交到版本库的文件的注释并覆盖修改之前的注释；
+&#8195;git reset &#8211;&#8211;soft HEAD~：HEAD带着分支一同移动到上一个提交对象；
+&#8195;git reflog：查看文件历史记录，与log不一样的是，只要HEAD变化，那么reflog就会记录下操作记录；
+&#8195;git reset [&#8211;&#8211;mixed] HEAD~：HEAD带着分支一同移动到上一个提交对象，而且还会改动暂存区，&#8211;&#8211;mixed不是必须写的内容；
+&#8195;git reset &#8211;&#8211;hard HEAD~：HEAD带着分支回退到上一个提交对象，同时还会覆盖掉暂存区、工作目录的内容；
