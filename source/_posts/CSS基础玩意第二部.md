@@ -79,3 +79,18 @@ tags:
 font属性可以设置字体相关的所有属性，字体大小与字体族是必写项，其他项随意或者是默认值，在字体大小后面可以增加行高的设置，编写格式：字体大小/行高值 字体族；
 font-weight:字重，可以设置字体的粗细值，可选值：normal（默认值，原始状态）、bold（加粗）、100-900；
 font-style：字体风格，可选值：normal（默认值，原始状态）、italic（斜体）；
+
+十九、文本格式
+text-align属性设置文本水平方向的对齐方式，可选值：left（左对齐）、right（右对齐）、center（水平居中）、justify（两端对齐）；
+vertical-align属性设置元素垂直方向的对齐方式，可选值：baseline（默认值，基线对齐）、top（顶部对齐）、bottom（底部对齐）、middle（居中对齐）；
+text-decoration属性设置文本修饰，可选值：none（什么都没设置）、underline（下划线）、line-through（删除线）、overline（上划线）；
+white-space属性设置网页如何处理空白，可选值：normal（默认值，正常处理）、nowrap（不换行）、pre（保留空白）；利用white-space属性制作出长文本加省略号的效果：
+![](5.JPG)
+
+二十、背景
+background-image属性设置背景图片，语法：background-image:url("图片路径")；也可以同时设置图片和背景颜色，语法：background-image:url("图片路径") 颜色；
+background-repeat属性设置背景图片的重复方式，可选值：repeat（默认值）、repeat-x（沿着x轴方向重复）、repeat-y（沿着y轴方向重复）、no-repeat（背景图片不重复）；
+background-position属性设置背景图片的位置，设置方式：
+&#8195;（1）通过top、left、right、bottom、center这几个方位来设置，设置时必须同时指定两个方位值，只写一个方位值会默认选取上中下行或左中右列的中间位置，语法：background-repeat:方位值1 方位值2；
+&#8195;（2）通过设置偏移量来指定背景图片位置，偏移量包括水平方向和垂直方向的偏移量，语法：background-repeat:水平方向数值 垂直方向数值；
+
