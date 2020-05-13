@@ -93,4 +93,26 @@ background-repeat属性设置背景图片的重复方式，可选值：repeat（
 background-position属性设置背景图片的位置，设置方式：
 &#8195;（1）通过top、left、right、bottom、center这几个方位来设置，设置时必须同时指定两个方位值，只写一个方位值会默认选取上中下行或左中右列的中间位置，语法：background-repeat:方位值1 方位值2；
 &#8195;（2）通过设置偏移量来指定背景图片位置，偏移量包括水平方向和垂直方向的偏移量，语法：background-repeat:水平方向数值 垂直方向数值；
+background-clip属性设置背景图片的范围，可选值：
+&#8195;（1）border-box（默认值）：背景图片会出现在边框的下面；
+&#8195;（2）padding-box：背景图片不会出现在边框下，只出现在内容区和内边距；
+&#8195;（3）content-box：背景图片只出现在内容区中；
+background-origin属性设置背景图片的偏移量（background-position中的设置偏移量指定图片位置）计算的原点，可选值：
+&#8195;（1）padding-box（默认值）：从内边距开始计算；
+&#8195;（2）content-box：背景图片的偏移量原点从内容区开始计算；
+&#8195;（3）border-box：背景图片的偏移量原点从边框开始计算；
+background-size属性设置背景图片的尺寸，语法格式：background-size:宽度 高度，宽度或高度不设置视为auto，若是background-size:cover，则图片比例不变;
+background-attachment属性设置背景图片是否随元素移动，可选值：
+&#8195;（1）scroll：背景图片会随元素的移动；
+&#8195;（2）fixed：背景图片固定在页面的某个位置，不会随元素移动；
+background属性是背景相关属性的简写属性，只要是与背景相关的属性都可以使用简写属性来应用，除了以下两种情况的设置要求外，其余背景相关的简写属性值没有声明顺序要求，设置的属性值有以下两面注意：
+&#8195;（1）background-size属性的属性值必须在background-position属性的属性值之前声明，且两个属性值之间用"/"隔开；
+&#8195;（2）background-origin属性的属性值必须在background-clip属性的属性值之前声明；
 
+二十一、渐变
+从一个颜色向其他颜色过渡的一种效果，主要分为线性渐变和径向渐变；
+线性渐变：沿一条直线发生变化；由background-image属性来设置，设置规则：
+&#8195;（1）使用background-image属性中的linear-gradient()来设置，语法格式：background-image:linear-gradient(颜色1,颜色2)；
+&#8195;（2）使用to left、to right、to bottom、to top四个值可以指定颜色的渐变方向，语法格式：background-image:linear-gradient(to left/right/bottom/top,颜色1,颜色2)；
+&#8195;（3）指定度数（deg）或圈（turn）可以设置旋转颜色渐变的效果，语法格式：background-image:linear-gradient(xxxdeg/xxxturn,颜色1,颜色2)；turn中的xxx是指以1为单位，转多少圈，例如：0.3turn、1turn等等；
+&#8195;（4）可同时指定多个颜色，在默认情况下，按父元素的宽高平均分布颜色所占区域，也可以手动指定分布区域，语法格式：background-image: repeating-linear-gradient(颜色1 xxpx,颜色2 xxpx)；其中，主要是以两个颜色设置的px差值为单位高度，总的高度以单位高度进行平均分布，然后平铺（就是总的高度可以分多少个单位高度就平铺多少次）；
