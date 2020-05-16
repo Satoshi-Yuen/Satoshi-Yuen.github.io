@@ -116,3 +116,15 @@ background属性是背景相关属性的简写属性，只要是与背景相关�
 &#8195;（2）使用to left、to right、to bottom、to top四个值可以指定颜色的渐变方向，语法格式：background-image:linear-gradient(to left/right/bottom/top,颜色1,颜色2)；
 &#8195;（3）指定度数（deg）或圈（turn）可以设置旋转颜色渐变的效果，语法格式：background-image:linear-gradient(xxxdeg/xxxturn,颜色1,颜色2)；turn中的xxx是指以1为单位，转多少圈，例如：0.3turn、1turn等等；
 &#8195;（4）可同时指定多个颜色，在默认情况下，按父元素的宽高平均分布颜色所占区域，也可以手动指定分布区域，语法格式：background-image: repeating-linear-gradient(颜色1 xxpx,颜色2 xxpx)；其中，主要是以两个颜色设置的px差值为单位高度，总的高度以单位高度进行平均分布，然后平铺（就是总的高度可以分多少个单位高度就平铺多少次）；
+径向渐变：具有放射性效果的渐变；由background-image属性来设置，注意要点：
+&#8195;（1）使用background-image属性中的radial-gradient()来设置；
+&#8195;（2）默认情况下根据元素的设置来计算径向渐变的形状；
+&#8195;（3）语法格式：background-image:radial-gradient(大小 at 位置,颜色1 位置,颜色2 位置,颜色3 位置)；
+&#8195;&#8195;&#8195;1）大小的属性值：直接使用px设置，例如：xxxpx xxxpx at 位置；circle（正圆）、ellipse（椭圆）、closest-side（近边）、closest-corner（近角）、farthest-side（远边）、farthset-corner（远角）
+&#8195;&#8195;&#8195;2）位置的属性值：top、left、right、bottom、center；
+
+二十二、表格
+（1）table标签中的border-spacing属性可以设置表格边框与单元格边框之间的间距；
+（2）table标签中的border-collapse属性可以设置边框合并；
+（3）默认情况下，td标签中的内容是左对齐垂直居中显示，可以通过vertical-align属性和text-align属性来手动改动；
+（4）在非表格元素中可以设置display:table-cell属性来将元素设置为单元格，这样就可以使用单元格的相关属性；
