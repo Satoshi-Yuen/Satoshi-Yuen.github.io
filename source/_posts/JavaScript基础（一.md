@@ -7,9 +7,10 @@ tags:
 在学习JavaScript的时候的一些笔记干货：
 
 一、输出
-（1）控制浏览器弹出一个警告框：alert("");
-（2）使计算机在body区域中输出内容：document.write("");
-（3）向控制台输出一个内容：console.log("");
+（1）alert("")：控制浏览器弹出一个警告框；
+（2）document.write("")：使计算机在body区域中输出内容；
+（3）console.log("")：向控制台输出一个内容；
+（4）confirm("")：用于弹出一个带有确认和取消按钮的提示框（点击确认按钮会返回true，点击取消按钮会返回false）；
 
 二、编写位置
 （1）button标签的onclick属性内；
