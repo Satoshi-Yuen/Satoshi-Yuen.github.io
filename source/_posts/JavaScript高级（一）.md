@@ -64,13 +64,13 @@ instanceof：
 
 五、回调函数
 种类：
-（1）dom事件回调；
-（2）定时器回调函数；
+（1）dom事件回调；（this：发生事件的dom元素）
+（2）定时器回调函数；（this：window）
 （3）ajax请求回调函数；
 （4）生命周期函数；
 
 六、IIFE
-匿名函数自调用（(function(){})）：Immediately-Invoked Function Expression
+立即调用函数表达式（(function(){})）：Immediately-Invoked Function Expression（匿名函数自调用）
 作用：
 （1）隐藏实现
 （2）不会污染外部命名空间（全局环境）；
