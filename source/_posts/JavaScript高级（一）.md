@@ -83,3 +83,23 @@ instanceof：
 （1）任何函数本质上都是通过某个对象调用，若没有直接指定，对象则是window；
 （2）所有函数内部都有一个变量this；
 （3）this的值都是调用函数的当前对象；
+
+八、原型对象
+原型对象（prototype）：每个函数都有一个prototype属性，默认指向一个Object空对象：要点：
+（1）在定义函数时自动添加，默认值为一个空白Object对象；
+（2）原型对象的属性是原型对象特有的；
+（3）原型对象有一个属性constructor，指向原型对象；例如：Fn.prototype.constructor===；
+（4）程序员只可以操作原型对象（ES6之前）；
+（5）每个函数的实例对象都自动拥有原型中的属性；
+
+九、显式原型与隐式原型
+显式原型（prototype）：在定义函数时自动添加默认值为一个空白Object对象；
+隐式原型（&#95;&#95;proto&#95;&#95;）：创建对象时自动添加的默认值为构造函数的prototype属性值（保存的是prototype属性的地址值，此地址值指向空白Object对象）；
+对象的隐式原型的值为其对应构造函数的显式原型的值，例如：
+function Fun(){}   //在此代码执行时，还会执行的一条内部语句：this.prototype={}
+var fun=new Fun()   //构造函数Fun()
+console.log(fun.&#95;&#95;proto&#95;&#95;===Fun.prototype)   //输出结果为true
+//为原型对象添加属性（一般添加方法，当然，其他也可）
+Fun.prototype.testp=function (){}
+
+
