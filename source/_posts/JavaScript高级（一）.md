@@ -85,7 +85,7 @@ instanceof：
 （3）this的值都是调用函数的当前对象；
 
 八、原型对象
-原型对象（prototype）：每个函数都有一个prototype属性，默认指向一个Object空对象：要点：
+原型对象（prototype）：每个函数都有一个prototype属性，默认指向一个Object空对象（但Object不是）：要点：
 （1）在定义函数时自动添加，默认值为一个空白Object对象；
 （2）原型对象的属性是原型对象特有的；
 （3）原型对象有一个属性constructor，指向原型对象；例如：Fn.prototype.constructor===；
@@ -93,7 +93,7 @@ instanceof：
 （5）每个函数的实例对象都自动拥有原型中的属性；
 
 九、显式原型与隐式原型
-显式原型（prototype）：在定义函数时自动添加默认值为一个空白Object对象；
+显式原型（prototype）：在定义函数时自动添加默认值为一个空白Object对象（但Object不是）；
 隐式原型（&#95;&#95;proto&#95;&#95;）：创建对象时自动添加的默认值为构造函数的prototype属性值（保存的是prototype属性的地址值，此地址值指向空白Object对象）；
 对象的隐式原型的值为其对应构造函数的显式原型的值，例如：
 function Fun(){}   //在此代码执行时，还会执行的一条内部语句：this.prototype={}
