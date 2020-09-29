@@ -81,3 +81,9 @@ property和attribute同步问题：
 &#8195;&#8195;endAngle：结束度数（必须是弧度制）
 &#8195;&#8195;anticlockwise：绘制曲线的方向；可选值：true（逆时针）、false（顺时针）；
 &#8195;根据给定的控制点和半径绘制一段圆弧（其实是三个控制点，通过moveTo再设置一个）：arcTo(x2,y2,x2,y2,radius)
+11.移动、旋转和缩放
+translate(x,y)：用来移动canvas的原点到一个不同的位置；
+rotate(angle)：顺时针方向旋转angle弧度（必须以弧度为单位）；
+scale(x,y)：进行缩放
+&#8195;放大的是css像素的面积，画布区域内css像素个数变少；
+&#8195;缩小的是css像素的面积，画布区域内css像素个数变多；
