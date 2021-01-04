@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SpringBoot基础(一) | Satoshiの部屋</title><meta name="description" content="SpringBoot：整合Spring技术栈的一站式框架，简化Spring技术栈的快速开发脚手架 一、初始化创建maven项目，配置pom文件和注入依赖（官方文档）；在主类上添加注释@SpringBootApplication：告知这是一个SpringBoot应用；@RestController&#x3D;@Controller+@ResponseBody：注释放在Controller类中；二、依赖管理父项"><meta name="keywords" content="SpringBoot"><meta name="author" content="Satoshi Yuen"><meta name="copyright" content="Satoshi Yuen"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="SpringBoot基础(一)"><meta name="twitter:description" content="SpringBoot：整合Spring技术栈的一站式框架，简化Spring技术栈的快速开发脚手架 一、初始化创建maven项目，配置pom文件和注入依赖（官方文档）；在主类上添加注释@SpringBootApplication：告知这是一个SpringBoot应用；@RestController&#x3D;@Controller+@ResponseBody：注释放在Controller类中；二、依赖管理父项"><meta name="twitter:image" content="http://yoursite.com/img/post.jpg"><meta property="og:type" content="article"><meta property="og:title" content="SpringBoot基础(一)"><meta property="og:url" content="http://yoursite.com/2021/01/03/SpringBoot%E5%9F%BA%E7%A1%80-%E4%B8%80/"><meta property="og:site_name" content="Satoshiの部屋"><meta property="og:description" content="SpringBoot：整合Spring技术栈的一站式框架，简化Spring技术栈的快速开发脚手架 一、初始化创建maven项目，配置pom文件和注入依赖（官方文档）；在主类上添加注释@SpringBootApplication：告知这是一个SpringBoot应用；@RestController&#x3D;@Controller+@ResponseBody：注释放在Controller类中；二、依赖管理父项"><meta property="og:image" content="http://yoursite.com/img/post.jpg"><meta property="article:published_time" content="2021-01-03T14:18:07.000Z"><meta property="article:modified_time" content="2021-01-04T13:41:52.391Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/2021/01/03/SpringBoot%E5%9F%BA%E7%A1%80-%E4%B8%80/"><link rel="next" title="微信小程序开发基础Ⅰ（持续更新）" href="http://yoursite.com/2020/10/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: false  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/gakki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">42</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">26</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="post-bg" id="nav" style="background-image: url(/img/post.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Satoshiの部屋</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">SpringBoot基础(一)</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2021-01-03 22:18:07"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2021-01-03</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2021-01-04 21:41:52"><i class="fa fa-history" aria-hidden="true"></i> Updated 2021-01-04</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><p>SpringBoot：整合Spring技术栈的一站式框架，简化Spring技术栈的快速开发脚手架</p>
+<p>一、初始化<br>创建maven项目，配置pom文件和注入依赖（官方文档）；<br>在主类上添加注释@SpringBootApplication：告知这是一个SpringBoot应用；<br>@RestController=@Controller+@ResponseBody：注释放在Controller类中；<br>二、依赖管理<br>父项目依赖管理：几乎声明所有开发中要用的依赖的版本号；<br>场景启动器：引入starter这个场景的所有常规都会自动引入；<br>以上均在pom文件中配合，官方文档有源码</p>
+<p>二、自动配置<br>1、自动配置好Tomcat；<br>2、自动配置好SpringMVC<br>&#8195;引入SpringMVC全套组件；<br>&#8195;自动配置好SpringMVC常用组件；<br>3、自动配置好web常用功能；<br>4、默认包结构<br>&#8195;主程序所在包及其下面所有子包的组件都会被扫入；<br>&#8195;扫入不在主程序所在包的其他包，注释配置：@SpringBootApplication(scanBasePackages=”路径”)；或@ComponentScan(“路径”)：指定扫描路径；<br>5、各种配置都有默认值<br>&#8195;配置文件的值最终绑定到每个类上，这个类会在容器中创建对象；<br>6、按需加载自动配置</p>
+<p>三、底层注解<br>1、@Configuration(proxyBeanMethods=true/false)：告诉SpringBoot是一个配置类==配置文件；<br>&#8195;（1）给容器中添加组件，以方法名作为组件id，返回类型是组件类型，返回的值是组件在容器中实例<br>&#8195;&#8195;<em>外部无论对配置类中的这个组件注册方法调用多少次获取的都是之前注册容器中的实例对象；<br>&#8195;&#8195;</em>配置类里面使用@Bean注释标注在方法上给容器注册组件，默认是单实例，配置类本身也是组件；<br>&#8195;（2）proxyBeanMethods：代理bean方法，参数选择：；<br>&#8195;&#8195;true：类组件之间有依赖关系方法调用得到之前单实例组件；<br>&#8195;&#8195;false：类组件之间无依赖关系；<br>2、@Import(…,…)：导入组件，给容器中自动创建出两个类型的组件，默认组件名是全类名；<br>3、@Conditional：条件装配，满足Conditional指定的条件则进行组件注入；<br>4、@ImportResource()：导入Spring配置文件，classpath:…..xml；<br>5、@ConfigurationProperties：配置绑定，只有在容器中的组件，才会有SpringBoot提供的功能；<br>6、@ConfigurationProperties+@Component：Dao类上配合；<br>7、@EnableConfigurationProperties(….class)：在主类上配置，参数为Dao类名.class；</p>
+<p>四、自动配置原理<br>引导加载自动配置类<br>1、@SpringBootConfiguration<br>&#8195;@Configuration：代表当前是一个配置类；<br>2、@ConponentScan：扫描包；<br>3、@EnableAutoConfiguration；<br>&#8195;*@SpringBootApplication=@SpringBootConfiguration+@ConponentScan+@EnableAutoConfiguration；<br>4、@AutoConfigurationPackage：利用Registrar给容器中导入一系列组件，将指定的一个报下的所有组件导入；<br>总结：<br>（1）SpringBoot先加载所有自动配置类；<br>（2）每个自动配置类按照条件进行生效，默认都会绑定配置文件指定值；<br>（3）生效的配置类就给容器中装配很多组件；<br>（4）只要容器中有这些组件，相对于功能就有了；<br>（5）定制化配置，用户直接可用自己的@Bean配置替换底层的组件；<br>&#8195;文件寻找路径：xxxAutoconfiguration–&gt;组件–&gt;xxxProperties中取值–&gt;application.properties</p>
+<p>五、Spring最佳实践<br>1、引入场景依赖（starter）；<br>2、查看自动配置：引入场景对应的自动配置一般都会生效；<br>3、是否需要修改，修改方式：<br>&#8195;（1）参照文档修改配置项；<br>&#8195;（2）自定义加入或者替换组件：@Bean、@Component；<br>&#8195;（3）自定义xxxcustomizer；<br>4、Lombok简化开发：引入lombok可以减少bean类相关代码的编写，提高开发效率，实现步骤：<br>&#8195;（1）pom文件引入相关依赖；<br>&#8195;（2）在idea中引入lombok插件；<br>引入lombok后，bean类可以注释来代替某些代码编写：<br>&#8195;&#8195;@Data：自动写get/set方法；<br>&#8195;&#8195;@ToString：自动写toString方法；<br>&#8195;&#8195;@AllargsConstructor：全参构造函数，自动构造；<br>&#8195;&#8195;@NoargsConstructor：无参构造函数，自动构造；<br>5、dev-tools：热更新；<br>&#8195;通过pom文件配置相关依赖，引入后，只要Ctrl+F9就可不用重启项目，实现实时更新；<br>6、Spring Initailizar：项目初始化向导，相当于是创建项目时把需要的场景选上，然后就会自动配置完成</p>
+<p>六、yaml<br>yaml，标记语言，相当于properties，基本语法：<br>（1）key: value（键值对，冒号后有一空格）；<br>（2）区分大小写；<br>（3）使用缩进表示层级关系；要点：<br>&#8195;缩进只允许空格，不能使用tab，缩进空格数不限，只要相同层级的元素左对齐即可；<br>（4）”#”表示注释；<br>（5）双引号不会转义（有”&quot;相当于转义，转义再转义相当于不转义），单引号会转义（有”&quot;，相当于没变化，也就是已转义）；</p>
+<p>七、静态资源规则与定制化<br>静态资源目录：/static、/public、/resources、/MEIA-INF/resources；<br>欢迎页功能：在静态资源路径下的index.html会自动显示，Controller能处理/index请求；要点：<br>&#8195;静态资源访问路径前缀会影响欢迎页功能，导致不会默认显示；静态资源访问路径前缀在application.yml中配置：<br>&#8195;&#8195;&#8195;mvc:<br>&#8195;&#8195;&#8195;&#8195;&#8195;static_path_pattern:/res/xxx;<br>&#8195;可配置静态资源路径，也是在application.yml中配置：<br>&#8195;&#8195;&#8195;resources：<br>&#8195;&#8195;&#8195;&#8195;&#8195;static_locations:classpath:/xxx/xxx;<br>自定义Favicon：网站小图标，要点：<br>&#8195;图标的图片名一定要是favicon；<br>&#8195;同样不能配置静态资源访问路径前缀，导致不会默认显示，但可配置静态资源路径；<br>&#8195;浏览器缓存也会影响favicon的显示；</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Satoshi Yuen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2021/01/03/SpringBoot%E5%9F%BA%E7%A1%80-%E4%B8%80/">http://yoursite.com/2021/01/03/SpringBoot%E5%9F%BA%E7%A1%80-%E4%B8%80/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/SpringBoot/">SpringBoot</a></div><div class="post_share"><div class="social-share" data-image="/img/post.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.png" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"/><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/10/28/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%EF%BC%88%E4%B8%80%EF%BC%89/"><img class="next_cover lazyload" data-src="/img/post.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">微信小程序开发基础Ⅰ（持续更新）</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Satoshi Yuen</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>
