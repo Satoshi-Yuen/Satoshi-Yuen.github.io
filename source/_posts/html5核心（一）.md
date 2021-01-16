@@ -4,7 +4,8 @@ date: 2020-09-25 23:04:21
 tags:
 - html
 ---
-一、attribute与property
+## 一、attribute与property
+
 attribute：html的预定义和自定义属性；
 property：js原生对象的直接属性；
 每一个预定义的attribute都会有一个对应的property；
@@ -17,7 +18,10 @@ property和attribute同步问题：
 &#8195;&#8195;&#8195;&#8195;（2）在没有改变property时，attribute会同步property；一旦修改了property，attribute不会同步property；
 *浏览器和用户操作也只识别property；
 
-二、canvas
+
+
+## 二、canvas
+
 （一）简介
 1.概念：canvas（画布），是HTML5新增的元素，可通过JavaScript中的脚本来绘制图形；具有默认的width值（300px）和height值（150px）；
 2.不支持IE8及以下的浏览器；而支持canvas元素的浏览器会渲染出canvas的图案，而不支持canvas的浏览器会显示canvas的替代内容（主要是canvas标签内的内容，一般下canvas标签内不需要定义编辑任何标签）；

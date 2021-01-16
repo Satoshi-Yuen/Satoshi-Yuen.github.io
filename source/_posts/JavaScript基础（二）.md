@@ -4,7 +4,8 @@ date: 2020-08-08 22:50:36
 tags:
 - JavaScript
 ---
-三十四、DOM
+## 三十四、DOM
+
 DOM（Document Object Model）：文档对象模型，JS通过DOM来对HTML文档进行操作，要点：；
 （1）节点（Node）：构成HTML文档最基本的单元，节点类型：文档节点、元素节点、属性节点、文本节点；
 （2）浏览器已经提供文档节点对象（document），是window属性，可在页面中直接使用，文档节点代表整个页面；
@@ -143,7 +144,8 @@ DOM（Document Object Model）：文档对象模型，JS通过DOM来对HTML文�
 &#8195;&#8195;&#8195;&#8195;event.ctrlKey属性：判断ctrl键是否被按下（按下返回true，否则返回false）；
 &#8195;&#8195;&#8195;&#8195;event.shiftKey属性：判断shift键是否被按下（按下返回true，否则返回false）；
 
-三十五、BOM
+## 三十五、BOM
+
 BOM（Browser Object Model）：浏览器对象模型，BOM可通过JS来操作浏览器，主要是通过BOM提供的对象来完成操作；
 （1）BOM对象：
 &#8195;&#8195;Window：整个浏览器的窗口，同时window也是网页中的全局对象，可直接取之使用；
