@@ -4,6 +4,8 @@ date: 2021-01-03 22:18:07
 tags:
 - SpringBoot
 ---
+以下是在学习SpringBoot过程中的笔记
+
 SpringBoot：整合Spring技术栈的一站式框架，简化Spring技术栈的快速开发脚手架
 
 ## 一、初始化
@@ -321,4 +323,170 @@ SpringBoot整合了Junit后，编写测试方法使用Junit5版本的@Test注解
 （4）@CsvFileSource：表示读取指定CSV文件内容作为参数化测试的参数；
 
 （5）@MethodSource：表示读取指定方法的返回值作为参数化测试的参数(注意方法返回需要是一个流)，使用时要指定方法名：@MethodSource("方法名")；
+
+
+
+## 十四、SpringBoot Actuator
+
+SpringBoot简化指标监控，抽取出Actuator场景，使得每个微服务快速引用即可获得生产级别的应用监控、审计等功能。
+
+1、使用步骤：
+
+（1）引入相关依赖场景；
+
+（2）访问 http://localhost:8080/actuator/xx（xx为监控端点名称）；
+
+（3）暴露所有监控信息为HTTP（http默认只暴露health和info端点），语法：
+
+```java
+management:
+  endpoints:
+    enabled-by-default: true //暴露所有端点信息
+    web:
+      exposure:
+        include: '*'  //以web方式暴露
+```
+
+2、常用监控端点（Actuator Endpoint）
+
+|                  |                                                              |
+| ---------------- | ------------------------------------------------------------ |
+| auditevents      | 暴露当前应用程序的审核事件信息。需要一个AuditEventRepository组件 |
+| beans            | 显示应用程序中所有Spring Bean的完整列表                      |
+| caches           | 暴露可用的缓存                                               |
+| conditions       | 显示自动配置的所有条件信息，包括匹配或不匹配的原因           |
+| configprops      | 显示所有@ConfigurationProperties                             |
+| env              | 暴露Spring的属性ConfigurableEnvironment                      |
+| flyway           | 显示已应用的所有Flyway数据库迁移。需要一个或多个Flyway组件   |
+| health           | 显示应用程序运行状况信息                                     |
+| httptrace        | 显示HTTP跟踪信息（默认情况下，最近100个HTTP请求-响应）。需要一个HttpTraceRepository组件 |
+| info             | 显示应用程序信息                                             |
+| integrationgraph | 显示Spring integrationgraph 。需要依赖spring-integration-core |
+| loggers          | 显示和修改应用程序中日志的配置                               |
+| liquibase        | 显示已应用的所有Liquibase数据库迁移。需要一个或多个`Liquibase`组件 |
+| metrics          | 显示当前应用程序的“指标”信息                                 |
+| mappings         | 显示所有@RequestMapping路径列表                              |
+| scheduledtasks   | 显示应用程序中的计划任务                                     |
+| sessions         | 允许从Spring Session支持的会话存储中检索和删除用户会话。需要使用Spring Session的基于Servlet的Web应用程序 |
+| shutdown         | 使应用程序正常关闭。默认禁用                                 |
+| startup          | 显示由ApplicationStartup收集的启动步骤数据。需要使用SpringApplication进行配置BufferingApplicationStartup |
+| threaddump       | 执行线程转储                                                 |
+
+最常用的监控端点：
+
+（1）Health：健康检查端点，定时的检查应用的健康状况；
+
+（2）Metrics：运行时指标；提供详细的、层级的、空间指标信息，这些信息可以被pull（主动推送）或者push（被动获取）方式得到；
+
+（3）Loggers：日志记录；
+
+3、端点管理
+
+默认所有端点都是开启的；若需要手动指定某些端点的开启或禁用，要在application配置文件中配置，可以使用以下配置语法：
+
+```java
+management:
+  endpoints:
+    enabled-by-default: false   ///手动关闭所有的端点
+  endpoint:
+    beans:
+      enabled: true     //手动开启beans端点
+    health:
+      enabled: true     //手动开启health端点
+```
+
+4、定制端点信息
+
+（1）定制health端点信息
+
+```java
+//主要是重写AbstractHealthIndicator类下的doHealthCheck方法
+@Component
+public class xxxHealthIndicator extends AbstractHealthIndicator {
+    /**
+     * 类名必须是以HealthIndicator结尾
+     */
+    @Override
+    protected void doHealthCheck(Health.Builder builder) throws Exception {
+        // 检查逻辑代码
+        	// 可以使用builder.status设置状态
+        	// 可以使用builder.withDetail("key", "value").withDetails(k);
+    }
+}
+```
+
+（2）定制info端点信息
+
+1）配置application.yml文件实现
+
+```java
+info:
+  appName: ""
+  version: ""
+  xxx: @yyy@   /使用@@可以获取值
+  //例如：
+  //mavenProjectName: @project.artifactId@  
+  //mavenProjectVersion: @project.version@
+```
+
+2）编写InfoContributor接口的contribute方法
+
+```java
+@Component
+public class xxxInfoContributor implements InfoContributor {
+	/**
+     * 类名必须是以InfoContributor结尾
+     */
+    @Override
+    public void contribute(Info.Builder builder) {
+        builder.withDetail("example",
+                Collections.singletonMap("key", "value"));
+    }
+
+}
+```
+
+（3）定制metrics端点信息
+
+这是网上的一个例子：
+
+```java
+//这是用于监控函数被调用的次数的
+public class MyService implements myservice{
+    Counter counter;
+    public MyService(MeterRegistry meterRegistry){
+         counter = meterRegistry.counter("myservice.hello.count");  //指定被监控的方法
+    }
+    //被监控的方法
+    public void hello() {
+        //每被调用一次，会自动执行increment方法，counter就会+1
+        counter.increment(); 
+    }
+}
+```
+
+定制的关键就是要引入MeterRegistry包并使用这个包的方法
+
+5、自定义端点
+
+```java
+@Component
+@Endpoint(id = "端点名")
+public class 类名 {
+    
+    //端点的读操作
+    @ReadOperation 
+    public Map 函数名(){
+        //逻辑代码
+    }
+    
+    //端点的写操作
+    @WriteOperation
+    private void 函数名(){
+        //逻辑代码
+    }
+}
+```
+
+SpringBoot可视化监控页面：https://github.com/codecentric/spring-boot-admin
 
