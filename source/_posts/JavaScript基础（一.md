@@ -4,7 +4,7 @@ date: 2020-07-13 23:54:03
 tags:
 - JavaScript
 ---
-在学习JavaScript的时候的一些笔记干货：
+在学习JavaScript的时候的一些笔记：
 
 ## 一、输出
 
