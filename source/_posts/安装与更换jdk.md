@@ -25,6 +25,8 @@ CLASSPATH：.\;%JAVA_HOME%\lib\dt.jar;\%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\bin
 
 path：%JAVA_HOME%\bin;
 
+------
+
 ### 更换jdk：
 
 1、将bin文件夹下的java、javaw、javaws文件夹复制放入**C:\ProgramData\Oracle\Java\javapath**和**C:\Windows\System32**下，覆盖原来的java、javaw、javaws；本质上就是覆盖原来的jdk。
