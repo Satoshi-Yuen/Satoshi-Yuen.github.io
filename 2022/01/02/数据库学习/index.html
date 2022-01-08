@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>数据库学习 | Satoshiの部屋</title><meta name="description" content="一、设置字符集1、查看字符集：show variables like ‘character_%’ 2、查询字符比较规则：show variables like ‘collation_%’ 3、修改MySQL中的my.ini文件： ​    （1）找到[mysql]，然后添加：default-character-set&#x3D;utf8 ​    （2）找到[mysqld]，然后添加character-se"><meta name="keywords" content="MySQL"><meta name="author" content="Satoshi Yuen"><meta name="copyright" content="Satoshi Yuen"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="数据库学习"><meta name="twitter:description" content="一、设置字符集1、查看字符集：show variables like ‘character_%’ 2、查询字符比较规则：show variables like ‘collation_%’ 3、修改MySQL中的my.ini文件： ​    （1）找到[mysql]，然后添加：default-character-set&#x3D;utf8 ​    （2）找到[mysqld]，然后添加character-se"><meta name="twitter:image" content="http://yoursite.com/img/post.jpg"><meta property="og:type" content="article"><meta property="og:title" content="数据库学习"><meta property="og:url" content="http://yoursite.com/2022/01/02/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/"><meta property="og:site_name" content="Satoshiの部屋"><meta property="og:description" content="一、设置字符集1、查看字符集：show variables like ‘character_%’ 2、查询字符比较规则：show variables like ‘collation_%’ 3、修改MySQL中的my.ini文件： ​    （1）找到[mysql]，然后添加：default-character-set&#x3D;utf8 ​    （2）找到[mysqld]，然后添加character-se"><meta property="og:image" content="http://yoursite.com/img/post.jpg"><meta property="article:published_time" content="2022-01-02T14:46:49.000Z"><meta property="article:modified_time" content="2022-01-07T06:51:25.892Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>数据库学习 | Satoshiの部屋</title><meta name="description" content="一、设置字符集1、查看字符集：show variables like ‘character_%’ 2、查询字符比较规则：show variables like ‘collation_%’ 3、修改MySQL中的my.ini文件： &amp;#8195;（1）找到[mysql]，然后添加：default-character-set&#x3D;utf8 &amp;#8195;（2）找到[mysqld]，然后添加characte"><meta name="keywords" content="MySQL"><meta name="author" content="Satoshi Yuen"><meta name="copyright" content="Satoshi Yuen"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="数据库学习"><meta name="twitter:description" content="一、设置字符集1、查看字符集：show variables like ‘character_%’ 2、查询字符比较规则：show variables like ‘collation_%’ 3、修改MySQL中的my.ini文件： &amp;#8195;（1）找到[mysql]，然后添加：default-character-set&#x3D;utf8 &amp;#8195;（2）找到[mysqld]，然后添加characte"><meta name="twitter:image" content="http://yoursite.com/img/post.jpg"><meta property="og:type" content="article"><meta property="og:title" content="数据库学习"><meta property="og:url" content="http://yoursite.com/2022/01/02/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/"><meta property="og:site_name" content="Satoshiの部屋"><meta property="og:description" content="一、设置字符集1、查看字符集：show variables like ‘character_%’ 2、查询字符比较规则：show variables like ‘collation_%’ 3、修改MySQL中的my.ini文件： &amp;#8195;（1）找到[mysql]，然后添加：default-character-set&#x3D;utf8 &amp;#8195;（2）找到[mysqld]，然后添加characte"><meta property="og:image" content="http://yoursite.com/img/post.jpg"><meta property="article:published_time" content="2022-01-02T14:46:49.000Z"><meta property="article:modified_time" content="2022-01-08T07:54:28.612Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
 var t = Cookies.get("theme")
 if (autoChangeMode == '1'){
   var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -81,83 +81,149 @@ function activateLightMode(){
 .justified-gallery img{
   opacity: 1
 }
-</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/gakki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">57</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">36</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、设置字符集"><span class="toc-number">1.</span> <span class="toc-text">一、设置字符集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、SQL分类"><span class="toc-number">2.</span> <span class="toc-text">二、SQL分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、规则-amp-规范"><span class="toc-number">3.</span> <span class="toc-text">三、规则&amp;规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、数据导入"><span class="toc-number">4.</span> <span class="toc-text">四、数据导入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、SELECT"><span class="toc-number">5.</span> <span class="toc-text">五、SELECT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、WHERE过滤"><span class="toc-number">6.</span> <span class="toc-text">六、WHERE过滤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、运算符"><span class="toc-number">7.</span> <span class="toc-text">七、运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、排序与分页"><span class="toc-number">8.</span> <span class="toc-text">八、排序与分页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、多表查询"><span class="toc-number">9.</span> <span class="toc-text">九、多表查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十、函数"><span class="toc-number">10.</span> <span class="toc-text">十、函数</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="post-bg" id="nav" style="background-image: url(/img/post.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Satoshiの部屋</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">数据库学习</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2022-01-02 22:46:49"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2022-01-02</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2022-01-07 14:51:25"><i class="fa fa-history" aria-hidden="true"></i> Updated 2022-01-07</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h2 id="一、设置字符集"><a href="#一、设置字符集" class="headerlink" title="一、设置字符集"></a>一、设置字符集</h2><p>1、查看字符集：show variables like ‘character_%’</p>
-<p>2、查询字符比较规则：show variables like ‘collation_%’</p>
-<p>3、修改MySQL中的my.ini文件：</p>
-<p>​    （1）找到[mysql]，然后添加：default-character-set=utf8</p>
-<p>​    （2）找到[mysqld]，然后添加character-set-server=utf8与collation-server=utf8_general_ci</p>
-<p>4、重启MySQL服务</p>
-<h2 id="二、SQL分类"><a href="#二、SQL分类" class="headerlink" title="二、SQL分类"></a>二、SQL分类</h2><p>1、DDL（数据定义语言）：CREATE(创表)、ALTER、DROP(删除表)、RENAME(重命名表)、TRUNCATE(清空表)</p>
-<p>2、DML（数据操作语言）：INSERT、DELETE、UPDATE、SELECT</p>
-<p>3、DCL（数据控制语言）：COMMIT(提交事务)、ROLLBACK(回滚)、SAVEPOINT(回滚到某点)、GRANT(权限赋予)、REVOKE(权限回收)</p>
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/gakki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">57</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">36</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、设置字符集"><span class="toc-number">1.</span> <span class="toc-text">一、设置字符集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、SQL分类"><span class="toc-number">2.</span> <span class="toc-text">二、SQL分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、规则-amp-规范"><span class="toc-number">3.</span> <span class="toc-text">三、规则&amp;规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、数据导入"><span class="toc-number">4.</span> <span class="toc-text">四、数据导入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、SELECT"><span class="toc-number">5.</span> <span class="toc-text">五、SELECT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、WHERE过滤"><span class="toc-number">6.</span> <span class="toc-text">六、WHERE过滤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、运算符"><span class="toc-number">7.</span> <span class="toc-text">七、运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、排序与分页"><span class="toc-number">8.</span> <span class="toc-text">八、排序与分页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、多表查询"><span class="toc-number">9.</span> <span class="toc-text">九、多表查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十、函数"><span class="toc-number">10.</span> <span class="toc-text">十、函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十一、SELECT基本语法"><span class="toc-number">11.</span> <span class="toc-text">十一、SELECT基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十二、子查询"><span class="toc-number">12.</span> <span class="toc-text">十二、子查询</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="post-bg" id="nav" style="background-image: url(/img/post.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Satoshiの部屋</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">数据库学习</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2022-01-02 22:46:49"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2022-01-02</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2022-01-08 15:54:28"><i class="fa fa-history" aria-hidden="true"></i> Updated 2022-01-08</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h2 id="一、设置字符集"><a href="#一、设置字符集" class="headerlink" title="一、设置字符集"></a>一、设置字符集</h2><p>1、<strong>查看字符集</strong>：show variables like ‘character_%’</p>
+<p>2、<strong>查询字符比较规则</strong>：show variables like ‘collation_%’</p>
+<p>3、<strong>修改MySQL中的my.ini文件</strong>：</p>
+<p>&#8195;（1）找到[mysql]，然后添加：default-character-set=utf8</p>
+<p>&#8195;（2）找到[mysqld]，然后添加character-set-server=utf8与collation-server=utf8_general_ci</p>
+<p>4、<strong>重启MySQL服务</strong></p>
+<h2 id="二、SQL分类"><a href="#二、SQL分类" class="headerlink" title="二、SQL分类"></a>二、SQL分类</h2><p>1、<strong>DDL（数据定义语言）</strong>：CREATE(创表)、ALTER、DROP(删除表)、RENAME(重命名表)、TRUNCATE(清空表)</p>
+<p>2、<strong>DML（数据操作语言）</strong>：INSERT、DELETE、UPDATE、SELECT</p>
+<p>3、<strong>DCL（数据控制语言）</strong>：COMMIT(提交事务)、ROLLBACK(回滚)、SAVEPOINT(回滚到某点)、GRANT(权限赋予)、REVOKE(权限回收)</p>
 <h2 id="三、规则-amp-规范"><a href="#三、规则-amp-规范" class="headerlink" title="三、规则&amp;规范"></a>三、规则&amp;规范</h2><p>1、windows系统下，MySQL不区分大小写；而在linux系统下，区分大小写</p>
 <p>2、数据库名、表名、字段名、字段别名、表列名要小写；SQL关键字、函数名、绑定变量要大写</p>
 <p>3、单行注释：’#’（MySQL特有）、’– ‘</p>
 <p>4、多行注释：/* */</p>
-<h2 id="四、数据导入"><a href="#四、数据导入" class="headerlink" title="四、数据导入"></a>四、数据导入</h2><p>方式一：source 文件的全路径名；必须用命令行输入</p>
-<p>方式二：借助具体的图形化界面的工具导入<a id="more"></a></p>
-<h2 id="五、SELECT"><a href="#五、SELECT" class="headerlink" title="五、SELECT"></a>五、SELECT</h2><p>1、设置别名：</p>
-<p>​    （1）在字段后面加’ 字段别名’</p>
-<p>​    （2）在字段后面加‘ AS 字段别名’</p>
-<p>​    （3）在字段后面加’ “字段别名”’；（双引号不能用单引号替换）</p>
-<p>2、去除重复行：在需要去除的字段前加上DISTINCT</p>
-<p>3、空值与运算符：空值null（不等于0、’’、’null‘）；与空值进行运算的结果一定为空</p>
-<p>4、着重号：若表名或者字段为关键字名，要用’``’括起</p>
-<p>5、查询常数</p>
-<p>6、显示表结构：DESCRIBE 表名</p>
+<h2 id="四、数据导入"><a href="#四、数据导入" class="headerlink" title="四、数据导入"></a>四、数据导入</h2><p><strong>方式一</strong>：source 文件的全路径名；必须用命令行输入</p>
+<p><strong>方式二</strong>：借助具体的图形化界面的工具导入<a id="more"></a></p>
+<h2 id="五、SELECT"><a href="#五、SELECT" class="headerlink" title="五、SELECT"></a>五、SELECT</h2><p>1、<strong>设置别名</strong>：</p>
+<p>&#8195;（1）在字段后面加’ 字段别名’</p>
+<p>&#8195;（2）在字段后面加‘ AS 字段别名’</p>
+<p>&#8195;（3）在字段后面加’ “字段别名”’；（双引号不能用单引号替换）</p>
+<p>2、<strong>去除重复行</strong>：在需要去除的字段前加上DISTINCT</p>
+<p>3、<strong>空值与运算符</strong>：空值null（不等于0、’’、’null‘）；与空值进行运算的结果一定为空</p>
+<p>4、<strong>着重号</strong>：若表名或者字段为关键字名，要用’``’括起</p>
+<p>5、<strong>查询常数</strong></p>
+<p>6、<strong>显示表结构</strong>：DESCRIBE 表名</p>
 <h2 id="六、WHERE过滤"><a href="#六、WHERE过滤" class="headerlink" title="六、WHERE过滤"></a>六、WHERE过滤</h2><p>1、WHERE放在FROM后面</p>
 <p>2、在WHERE过滤中不能使用列的别名</p>
-<h2 id="七、运算符"><a href="#七、运算符" class="headerlink" title="七、运算符"></a>七、运算符</h2><p>1、算术运算符：+、-、*、/、div、%，要点：</p>
-<p>​    （1）SQL中的’+’只表示加法运算，无拼接字符串的作用</p>
-<p>​    （2）div下分母为0，则为NULL</p>
-<p>​    （3）’%’运算的结果符号与被模数符号相同</p>
-<p>2、比较运算符：=、&lt;、&gt;、&lt;=&gt;、!=、&lt;&gt;，要点：</p>
-<p>​    （1）字符串存在隐式转换，转换不成功则为0；</p>
-<p>​    （2）两边都是字符串时，则按ANSII码比较</p>
-<p>​    （3）当运算符不是&lt;=&gt;时，有NULL参与比较时，则为NULL</p>
-<p>​    （4）当运算符为&lt;=&gt;时，若两个比较元素都是NULL则返回1，其中一个不为NULL返回0</p>
-<p>3、LIKE：模糊查询；’_’代表一个不确定的字符，’%’代表0、1、2…个字符，’\’代表转义字符</p>
-<p>4、REGEXP、RLIKE：正则表达式</p>
-<p>5、逻辑表达式：NOT(!)、AND(&amp;&amp;)、OR(||)、XOR(逻辑异或)</p>
-<p>6、位运算符：’&amp;’、’|’、’^’、’~’、’&gt;&gt;’、’&lt;&lt;’</p>
+<h2 id="七、运算符"><a href="#七、运算符" class="headerlink" title="七、运算符"></a>七、运算符</h2><p>1、<strong>算术运算符</strong>：+、-、*、/、div、%，要点：</p>
+<p>&#8195;（1）SQL中的’+’只表示加法运算，无拼接字符串的作用</p>
+<p>&#8195;（2）div下分母为0，则为NULL</p>
+<p>&#8195;（3）’%’运算的结果符号与被模数符号相同</p>
+<p>2、<strong>比较运算符</strong>：=、&lt;、&gt;、&lt;=&gt;、!=、&lt;&gt;，要点：</p>
+<p>&#8195;（1）字符串存在隐式转换，转换不成功则为0；</p>
+<p>&#8195;（2）两边都是字符串时，则按ANSII码比较</p>
+<p>&#8195;（3）当运算符不是&lt;=&gt;时，有NULL参与比较时，则为NULL</p>
+<p>&#8195;（4）当运算符为&lt;=&gt;时，若两个比较元素都是NULL则返回1，其中一个不为NULL返回0</p>
+<p>3、<strong>LIKE</strong>：模糊查询；’_’代表一个不确定的字符，’%’代表0、1、2…个字符，’\’代表转义字符</p>
+<p>4、<strong>REGEXP、RLIKE</strong>：正则表达式</p>
+<p>5、<strong>逻辑表达式</strong>：NOT(!)、AND(&amp;&amp;)、OR(||)、XOR(逻辑异或)</p>
+<p>6、<strong>位运算符</strong>：’&amp;’、’|’、’^’、’~’、’&gt;&gt;’、’&lt;&lt;’</p>
 <p><img src="/" class="lazyload" data-src="/2022/01/02/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/1.jpg"  alt></p>
-<h2 id="八、排序与分页"><a href="#八、排序与分页" class="headerlink" title="八、排序与分页"></a>八、排序与分页</h2><p>1、排序</p>
-<p>​    （1）使用ORDER BY对查询到的数据进行排序</p>
-<p>​    （2）升序ASC(默认)、降序DESC；使用时放在字段的后面</p>
-<p>​    （3）ORDER BY可用列表的别名</p>
-<p>​    （4）WHERE过滤的使用要在ORDER BY之前</p>
-<p>​    （5）二级排序：按需求顺序写排序（ORDER BY）</p>
-<p>2、分页</p>
-<p>​    （1）使用关键字LIMIT，语法：LIMIT num1,num2，注意：</p>
-<p>​            ①num1：偏移量，指向第num1条记录；计算公式：(pageNo-1)*pageSize</p>
-<p>​            ②num2：条目数，也就是一页显示的数量；计算公式：pageSize</p>
-<p>​    （2）WHERE过滤、ORDER BY、LIMIT编写的顺序：WHERE&gt;ORDER BY&gt;LIMIT</p>
+<h2 id="八、排序与分页"><a href="#八、排序与分页" class="headerlink" title="八、排序与分页"></a>八、排序与分页</h2><p>1、<strong>排序</strong></p>
+<p>&#8195;（1）使用ORDER BY对查询到的数据进行排序</p>
+<p>&#8195;（2）升序ASC(默认)、降序DESC；使用时放在字段的后面</p>
+<p>&#8195;（3）ORDER BY可用列表的别名</p>
+<p>&#8195;（4）WHERE过滤的使用要在ORDER BY之前</p>
+<p>&#8195;（5）二级排序：按需求顺序写排序（ORDER BY）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ORDER BY 字段1 (DESC/ASC),字段2 (DESC/ASC)....</span><br><span class="line">//意义：记录先按字段1的降序或升序排列；若字段1中出现相同的情况，则按字段2的降序或升序排列；后面以此类推</span><br></pre></td></tr></table></figure>
+
+<p>2、<strong>分页</strong></p>
+<p>&#8195;（1）使用关键字LIMIT，语法：LIMIT num1,num2，注意：</p>
+<p>&#8195;&#8195;&#8195;①num1：偏移量，指向第num1条记录；计算公式：(pageNo-1)*pageSize</p>
+<p>&#8195;&#8195;&#8195;②num2：条目数，也就是一页显示的数量；计算公式：pageSize</p>
+<p>&#8195;（2）WHERE过滤、ORDER BY、LIMIT编写的顺序：WHERE&gt;ORDER BY&gt;LIMIT</p>
 <h2 id="九、多表查询"><a href="#九、多表查询" class="headerlink" title="九、多表查询"></a>九、多表查询</h2><p>1、若表中有别名，则在SELECT与WHERE中药用别名，不能用原名</p>
 <p>2、当n个表实现多表查询时，至少要n-1个连接条件，否则会出现笛卡尔积错误</p>
-<p>3、分类：</p>
-<p>​    （1）等值连接与非等值连接（等号与不等号）</p>
-<p>​    （2）自连接与非自连接（自己与自己连接）</p>
-<p>​    （3）内连接与外连接</p>
-<p>​            ①外连接包括左外连接（LIFT (OUTER) JOIN）、右外连接（RIGHT (OUTER) JOIN）、满外连接（FULL (OUTER) JOIN）</p>
-<p>​            ②SQL92用’+’实现外连接</p>
-<p>​            ③SQL99使用JOIN (表名) ON (条件) 实现多表连接</p>
-<p>​            ④UNION作用：去重；UNION ALL作用：不去重；NATURAL JOIN作用：查询两表中“所有相同字段”，然后等值连接；USING作用：当两表中连接字段相同时，可用USING，语法为FROM…..USING 字段名</p>
-<p>​            ⑤7种JOIN实现：</p>
-<p>​            ⑥内连接是结果包含一个表与另一个表匹配的行（交集）</p>
-<h2 id="十、函数"><a href="#十、函数" class="headerlink" title="十、函数"></a>十、函数</h2><p>1、单行函数，要点：</p>
-<p>​    （1）操作数据对象</p>
-<p>​    （2）接受参数返回一个结果</p>
-<p>​    （3）只对一行进行变换、</p>
-<p>​    （4）每行返回一个结果</p>
-<p>​    （5）可嵌套</p>
-<p>​    （6）参数可以是一列或一个值</p>
-<p>2、聚合函数，作用于一组数据，并对一组数据返回一个值，语法：SELECT 聚合函数；常见的聚合函数：</p>
-<p>​    （1） AVG(数值型数据)：计算平均值并返回</p>
-<p>​    （2）SUM(数值型数据)：计算总和并返回</p>
-<p>​    （3）MIN(任意数据类型参数)：计算一组值中的最小值并返回</p>
-<p>​    （4）MAX(任意数据类型参数)：计算一组值中的最大值并返回</p>
-<p>​    （5）COUNT(字段)：统计并返回相关的记录总行数</p>
-<p>​    注意：</p>
-<p>​        ①记录为非NULL时才会记录，否则不统计；而COUNT(*)与COUNT(1)返回的是总记录行数，不区分NULL与非NULL</p>
-<p>​        ②聚合函数不能嵌套使用</p>
+<p>3、<strong>分类</strong>：</p>
+<p>&#8195;（1）等值连接与非等值连接（等号与不等号）</p>
+<p>&#8195;（2）自连接与非自连接（自己与自己连接）</p>
+<p>&#8195;（3）内连接与外连接</p>
+<p>&#8195;&#8195;&#8195;①外连接包括左外连接（LIFT (OUTER) JOIN）、右外连接（RIGHT (OUTER) JOIN）、满外连接（FULL (OUTER) JOIN）</p>
+<p>&#8195;&#8195;&#8195;②SQL92用’+’实现外连接</p>
+<p>&#8195;&#8195;&#8195;③SQL99使用JOIN (表名) ON (条件) 实现多表连接</p>
+<p>&#8195;&#8195;&#8195;④UNION作用：去重；UNION ALL作用：不去重；NATURAL JOIN作用：查询两表中“所有相同字段”，然后等值连接；USING作用：当两表中连接字段相同时，可用USING，语法为FROM…..USING 字段名</p>
+<p>&#8195;&#8195;&#8195;⑤7种JOIN实现：<br><img src="/" class="lazyload" data-src="/2022/01/02/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/2.png"  alt></p>
+<p>&#8195;&#8195;&#8195;⑥内连接是结果包含一个表与另一个表匹配的行（交集）</p>
+<h2 id="十、函数"><a href="#十、函数" class="headerlink" title="十、函数"></a>十、函数</h2><p>1、<strong>单行函数</strong>，要点：</p>
+<p>&#8195;（1）操作数据对象</p>
+<p>&#8195;（2）接受参数返回一个结果</p>
+<p>&#8195;（3）只对一行进行变换、</p>
+<p>&#8195;（4）每行返回一个结果</p>
+<p>&#8195;（5）可嵌套</p>
+<p>&#8195;（6）参数可以是一列或一个值</p>
+<p>2、<strong>聚合函数</strong>，作用于一组数据，并对一组数据返回一个值，语法：SELECT 聚合函数；常见的聚合函数：</p>
+<p>&#8195;（1） AVG(数值型数据)：计算平均值并返回</p>
+<p>&#8195;（2）SUM(数值型数据)：计算总和并返回</p>
+<p>&#8195;（3）MIN(任意数据类型参数)：计算一组值中的最小值并返回</p>
+<p>&#8195;（4）MAX(任意数据类型参数)：计算一组值中的最大值并返回</p>
+<p>&#8195;（5）COUNT(字段)：统计并返回相关的记录总行数</p>
+<p>&#8195;注意：</p>
+<p>&#8195;&#8195;&#8195;①记录为非NULL时才会记录，否则不统计；而COUNT(*)与COUNT(1)返回的是总记录行数，不区分NULL与非NULL</p>
+<p>&#8195;&#8195;&#8195;②聚合函数不能嵌套使用</p>
+<p>3、<strong>GROUP BY</strong></p>
+<p>&#8195;（1）<strong>作用</strong>：数据分组</p>
+<p>&#8195;（2）<strong>语法</strong>：FROM….(WHERE)….GROUP BY…</p>
+<p>&#8195;（3）SELECT中出现的非组函数的字段必须声明在GROUP BY中，但GROUP BY中声明的字段可不出现在SELECT中</p>
+<p>&#8195;（4）GROUP BY在FROM后，在WHERE后，在ORDER BY前，在LIMIT前</p>
+<p>&#8195;（5）<strong>WITH ROLLUP</strong>：MySQL8新特性；使用之后，在所有查询出的分组记录之后增加一条计算查询出的所有记录的总和的记录，即统计记录数量，WITH ROLLUP不能与ORDER BY同时使用</p>
+<p>4、<strong>HAVING</strong></p>
+<p>&#8195;（1）WHERE中不能出现聚合函数</p>
+<p>&#8195;（2）HAVING必须声明在GROUP BY后面</p>
+<p>&#8195;（3）使用HAVING的前提是使用GROUP BY</p>
+<h2 id="十一、SELECT基本语法"><a href="#十一、SELECT基本语法" class="headerlink" title="十一、SELECT基本语法"></a>十一、SELECT基本语法</h2><p>1、<strong>SQL92语法&amp;SQL99语法（关键字顺序不可颠倒）</strong></p>
+<p>&#8195;（1）SQL92语法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ...,...,...(存在聚合函数)</span><br><span class="line"><span class="keyword">FROM</span> 表<span class="number">1</span>,表<span class="number">2</span>,表<span class="number">3.</span>..</span><br><span class="line"><span class="keyword">WHERE</span> 多表的连接条件 <span class="keyword">AND</span> 不包含聚合函数的过滤条件</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> ...</span><br><span class="line"><span class="keyword">HAVING</span> 包含聚合函数的过滤条件</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ...</span><br><span class="line"><span class="keyword">LIMIT</span></span><br></pre></td></tr></table></figure>
+
+<p>&#8195;（2）SQL99语法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ...,...,...(存在聚合函数)</span><br><span class="line"><span class="keyword">FROM</span> 表<span class="number">1</span> (<span class="keyword">LEFT</span>/<span class="keyword">RIGHT</span>) <span class="keyword">JOIN</span> ... <span class="keyword">ON</span> 多表的连接条件 表<span class="number">2</span> (<span class="keyword">LEFT</span>/<span class="keyword">RIGHT</span>) <span class="keyword">JOIN</span> ... <span class="keyword">ON</span> 多表的连接条件...</span><br><span class="line"><span class="keyword">WHERE</span> 多表的连接条件 <span class="keyword">AND</span> 不包含聚合函数的过滤条件</span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> ...</span><br><span class="line"><span class="keyword">HAVING</span> 包含聚合函数的过滤条件</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> ...</span><br><span class="line"><span class="keyword">LIMIT</span></span><br></pre></td></tr></table></figure>
+
+<p>3、<strong>以上两语法的各个执行顺序</strong></p>
+<p>【FROM -&gt; WHERE -&gt; GROUP BY -&gt; HAVING】 -&gt; 【SELECT 的字段 -&gt; DISTINCT】 -&gt;【 ORDER BY -&gt; LIMIT】</p>
+<p>4、<strong>WHERE和HAVING的对比</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">WHERE</th>
+<th align="center"></th>
+<th align="left">HAVING</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">（1）可以直接使用表中的字段作为过滤条件<br>（2）不能使用分组中的计算函数作为过滤条件<br>（3）通过连接从关联表中获取需要的数据，WHERE先筛选后连接</td>
+<td align="center">区别</td>
+<td align="left">（1）必须要与GROUP BY配合使用<br>（2）可以把分组计算的函数和分组字段作为筛选条件<br>（3）通过连接从关联表中获取需要的数据，HAVING先连接后筛选</td>
+</tr>
+<tr>
+<td align="left">先筛选数据再关联，执行效率高</td>
+<td align="center">优点</td>
+<td align="left">可以使用分组中的计算函数</td>
+</tr>
+<tr>
+<td align="left">不能使用分组中的计算函数进行筛选</td>
+<td align="center">缺点</td>
+<td align="left">在最后的结果集中进行筛选，执行效率较低</td>
+</tr>
+<tr>
+<td align="left">相比之下，小</td>
+<td align="center">作用范围</td>
+<td align="left">相比之下，大</td>
+</tr>
+</tbody></table>
+<p><u>注意</u>：WHERE与HAVING的使用无冲突；而当存在<strong>一般的过滤条件</strong>时，条件应<strong>放在WHERE</strong>当中，当存在<strong>聚合函数的过滤条件</strong>时，应<strong>放在HAVING</strong>当中</p>
+<p><em>原因</em>：</p>
+<p>&#8195;（1）在查询语法结构中，WHERE 在 GROUP BY 之前，因此 WHERE 无法对分组结果进行筛选；而HAVING 在 GROUP BY 之后，可以使用分组字段和分组中的计算函数，对分组的结果集进行筛选</p>
+<p>&#8195;（2）在关联查询中，WHERE 比 HAVING 更高效。因为 WHERE 可以先筛选，用一个筛选后的较小数据集和关联表进行连接，这样占用的资源比较少，执行效率也比较高。HAVING 则需要先把结果集准备好，也就是用未被筛选的数据集进行关联，然后对这个大的数据集进行筛选，这样占用的资源就比较多，执行效率也较低。 </p>
+<h2 id="十二、子查询"><a href="#十二、子查询" class="headerlink" title="十二、子查询"></a>十二、子查询</h2><p>1、<strong>基本语法</strong></p>
+<p><img src="/" class="lazyload" data-src="/2022/01/02/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/3.png"  alt></p>
+<p>要点：</p>
+<p>&#8195;（1）子查询（内查询）在主查询之前一次执行完成</p>
+<p>&#8195;（2）子查询的结果被主查询（外查询）使用</p>
+<p>&#8195;（3）子查询要包含在括号内</p>
+<p>&#8195;（4）将子查询放在比较条件的右侧</p>
+<p>&#8195;（5）单行操作符对应单行子查询，多行操作符对应多行子查询</p>
+<p>2、<strong>子查询分类</strong></p>
+<p>&#8195;（1）按内查询的结果返回一条还是多条记录，将子查询分为<em>单行子查询、多行子查询</em></p>
+<p>&#8195;（2）按内查询是否被执行多次，将子查询划分为<em>相关(或关联)子查询<em>和</em>不相关(或非关联)子查询</em></p>
 </div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Satoshi Yuen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2022/01/02/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/">http://yoursite.com/2022/01/02/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AD%A6%E4%B9%A0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/MySQL/">MySQL</a></div><div class="post_share"><div class="social-share" data-image="/img/post.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.png" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付寶"/><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2022/01/07/MySQL%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0/"><img class="prev_cover lazyload" data-src="/img/post.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">MySQL常用的单行函数</div></div></a></div><div class="next-post pull_right"><a href="/2021/03/10/ORA-12514%E7%9B%91%E5%90%AC%E7%A8%8B%E5%BA%8F%E5%BD%93%E5%89%8D%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E8%BF%9E%E6%8E%A5%E6%8F%8F%E8%BF%B0%E7%AC%A6%E4%B8%AD%E8%AF%B7%E6%B1%82%E7%9A%84%E6%9C%8D%E5%8A%A1/"><img class="next_cover lazyload" data-src="/img/post.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">ORA-12514：监听程序当前无法识别连接描述符中请求的服务 报错的解决方案</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> Recommend</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/04/13/MySQL数据类型-set（集合）与enum（枚举）/" title="MySQL数据类型---set（集合）与enum（枚举）"><img class="relatedPosts_cover lazyload"data-src="/img/post.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-04-13</div><div class="relatedPosts_title">MySQL数据类型---set（集合）与enum（枚举）</div></div></a></div><div class="relatedPosts_item"><a href="/2022/01/07/MySQL常用的单行函数/" title="MySQL常用的单行函数"><img class="relatedPosts_cover lazyload"data-src="/img/post.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2022-01-07</div><div class="relatedPosts_title">MySQL常用的单行函数</div></div></a></div></div><div class="clear_both"></div></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Satoshi Yuen</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>

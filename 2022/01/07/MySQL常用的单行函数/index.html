@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MySQL常用的单行函数 | Satoshiの部屋</title><meta name="description" content="内容源于网络 1、数值函数（1）基本函数    函数 用法    ABS(x) 返回x的绝对值   SIGN(X) 返回X的符号。正数返回1，负数返回-1，0返回0   PI() 返回圆周率的值   CEIL(x)，CEILING(x) 返回大于或等于某个值的最小整数   FLOOR(x) 返回小于或等于某个值的最大整数   LEAST(e1,e2,e3…) 返回列表中的最小值   GREATES"><meta name="keywords" content="MySQL"><meta name="author" content="Satoshi Yuen"><meta name="copyright" content="Satoshi Yuen"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="MySQL常用的单行函数"><meta name="twitter:description" content="内容源于网络 1、数值函数（1）基本函数    函数 用法    ABS(x) 返回x的绝对值   SIGN(X) 返回X的符号。正数返回1，负数返回-1，0返回0   PI() 返回圆周率的值   CEIL(x)，CEILING(x) 返回大于或等于某个值的最小整数   FLOOR(x) 返回小于或等于某个值的最大整数   LEAST(e1,e2,e3…) 返回列表中的最小值   GREATES"><meta name="twitter:image" content="http://yoursite.com/img/post.jpg"><meta property="og:type" content="article"><meta property="og:title" content="MySQL常用的单行函数"><meta property="og:url" content="http://yoursite.com/2022/01/07/MySQL%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0/"><meta property="og:site_name" content="Satoshiの部屋"><meta property="og:description" content="内容源于网络 1、数值函数（1）基本函数    函数 用法    ABS(x) 返回x的绝对值   SIGN(X) 返回X的符号。正数返回1，负数返回-1，0返回0   PI() 返回圆周率的值   CEIL(x)，CEILING(x) 返回大于或等于某个值的最小整数   FLOOR(x) 返回小于或等于某个值的最大整数   LEAST(e1,e2,e3…) 返回列表中的最小值   GREATES"><meta property="og:image" content="http://yoursite.com/img/post.jpg"><meta property="article:published_time" content="2022-01-07T03:35:49.000Z"><meta property="article:modified_time" content="2022-01-07T04:19:33.253Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MySQL常用的单行函数 | Satoshiの部屋</title><meta name="description" content="内容源于网络 1、数值函数（1）基本函数    函数 用法    ABS(x) 返回x的绝对值   SIGN(X) 返回X的符号。正数返回1，负数返回-1，0返回0   PI() 返回圆周率的值   CEIL(x)，CEILING(x) 返回大于或等于某个值的最小整数   FLOOR(x) 返回小于或等于某个值的最大整数   LEAST(e1,e2,e3…) 返回列表中的最小值   GREATES"><meta name="keywords" content="MySQL"><meta name="author" content="Satoshi Yuen"><meta name="copyright" content="Satoshi Yuen"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="dns-prefetch" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="dns-prefetch" href="https://fonts.googleapis.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="dns-prefetch" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="MySQL常用的单行函数"><meta name="twitter:description" content="内容源于网络 1、数值函数（1）基本函数    函数 用法    ABS(x) 返回x的绝对值   SIGN(X) 返回X的符号。正数返回1，负数返回-1，0返回0   PI() 返回圆周率的值   CEIL(x)，CEILING(x) 返回大于或等于某个值的最小整数   FLOOR(x) 返回小于或等于某个值的最大整数   LEAST(e1,e2,e3…) 返回列表中的最小值   GREATES"><meta name="twitter:image" content="http://yoursite.com/img/post.jpg"><meta property="og:type" content="article"><meta property="og:title" content="MySQL常用的单行函数"><meta property="og:url" content="http://yoursite.com/2022/01/07/MySQL%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8D%95%E8%A1%8C%E5%87%BD%E6%95%B0/"><meta property="og:site_name" content="Satoshiの部屋"><meta property="og:description" content="内容源于网络 1、数值函数（1）基本函数    函数 用法    ABS(x) 返回x的绝对值   SIGN(X) 返回X的符号。正数返回1，负数返回-1，0返回0   PI() 返回圆周率的值   CEIL(x)，CEILING(x) 返回大于或等于某个值的最小整数   FLOOR(x) 返回小于或等于某个值的最大整数   LEAST(e1,e2,e3…) 返回列表中的最小值   GREATES"><meta property="og:image" content="http://yoursite.com/img/post.jpg"><meta property="article:published_time" content="2022-01-07T03:35:49.000Z"><meta property="article:modified_time" content="2022-01-07T07:01:44.971Z"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
 var t = Cookies.get("theme")
 if (autoChangeMode == '1'){
   var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -81,7 +81,7 @@ function activateLightMode(){
 .justified-gallery img{
   opacity: 1
 }
-</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/gakki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">57</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">36</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、数值函数"><span class="toc-number">1.</span> <span class="toc-text">1、数值函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、字符串函数"><span class="toc-number">2.</span> <span class="toc-text">2、字符串函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、时间和日期函数"><span class="toc-number">3.</span> <span class="toc-text">3、时间和日期函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、流程控制函数"><span class="toc-number">4.</span> <span class="toc-text">4、流程控制函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、加密与解密函数"><span class="toc-number">5.</span> <span class="toc-text">5、加密与解密函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、MySQL信息函数"><span class="toc-number">6.</span> <span class="toc-text">6、MySQL信息函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7、其他函数"><span class="toc-number">7.</span> <span class="toc-text">7、其他函数</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="post-bg" id="nav" style="background-image: url(/img/post.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Satoshiの部屋</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">MySQL常用的单行函数</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2022-01-07 11:35:49"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2022-01-07</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2022-01-07 12:19:33"><i class="fa fa-history" aria-hidden="true"></i> Updated 2022-01-07</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><p>内容源于网络</p>
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/gakki.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">57</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">36</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、数值函数"><span class="toc-number">1.</span> <span class="toc-text">1、数值函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、字符串函数"><span class="toc-number">2.</span> <span class="toc-text">2、字符串函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、时间和日期函数"><span class="toc-number">3.</span> <span class="toc-text">3、时间和日期函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、流程控制函数"><span class="toc-number">4.</span> <span class="toc-text">4、流程控制函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、加密与解密函数"><span class="toc-number">5.</span> <span class="toc-text">5、加密与解密函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、MySQL信息函数"><span class="toc-number">6.</span> <span class="toc-text">6、MySQL信息函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7、其他函数"><span class="toc-number">7.</span> <span class="toc-text">7、其他函数</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><div class="post-bg" id="nav" style="background-image: url(/img/post.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Satoshiの部屋</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> List</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> Movie</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">MySQL常用的单行函数</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2022-01-07 11:35:49"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2022-01-07</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2022-01-07 15:01:44"><i class="fa fa-history" aria-hidden="true"></i> Updated 2022-01-07</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><p>内容源于网络</p>
 <h2 id="1、数值函数"><a href="#1、数值函数" class="headerlink" title="1、数值函数"></a>1、数值函数</h2><p><strong>（1）基本函数</strong></p>
 <table>
 <thead>
@@ -397,15 +397,15 @@ function activateLightMode(){
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>CURDATE()</strong> ，CURRENT_DATE()</td>
+<td>CURDATE() ，CURRENT_DATE()</td>
 <td>返回当前日期，只包含年、月、日</td>
 </tr>
 <tr>
-<td><strong>CURTIME()</strong> ， CURRENT_TIME()</td>
+<td>CURTIME()， CURRENT_TIME()</td>
 <td>返回当前时间，只包含时、分、秒</td>
 </tr>
 <tr>
-<td><strong>NOW()</strong> / SYSDATE() / CURRENT_TIMESTAMP() / LOCALTIME() / LOCALTIMESTAMP()</td>
+<td>NOW() / SYSDATE() / CURRENT_TIMESTAMP() / LOCALTIME() / LOCALTIMESTAMP()</td>
 <td>返回当前系统日期和时间</td>
 </tr>
 <tr>
@@ -750,34 +750,6 @@ function activateLightMode(){
 </tr>
 <tr>
 <td>SHA(str)</td>
-<td>从原明文密码str计算并返回加密后的密码字符串，当参数为NULL时，返回NULL。<code>SHA加密算法比MD5更加安全</code>。</td>
-</tr>
-<tr>
-<td>ENCODE(value,password_seed)</td>
-<td>返回使用password_seed作为加密密码加密value</td>
-</tr>
-<tr>
-<td>DECODE(value,password_seed)</td>
-<td>返回使用password_seed作为加密密码解密value</td>
-</tr>
-</tbody></table>
-<h2 id="6、MySQL信息函数"><a href="#6、MySQL信息函数" class="headerlink" title="6、MySQL信息函数"></a>6、MySQL信息函数</h2><table>
-<thead>
-<tr>
-<th>函数</th>
-<th>用法</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>PASSWORD(str)</td>
-<td>返回字符串str的加密版本，41位长的字符串。加密结果<code>不可逆</code>，常用于用户的密码加密</td>
-</tr>
-<tr>
-<td>MD5(str)</td>
-<td>返回字符串str的md5加密后的值，也是一种加密方式。若参数为NULL，则会返回NULL</td>
-</tr>
-<tr>
-<td>SHA(str)</td>
 <td>从原明文密码str计算并返回加密后的密码字符串，当参数为NULL时，返回NULL。</td>
 </tr>
 <tr>
@@ -792,6 +764,39 @@ function activateLightMode(){
 <p>注意：</p>
 <p>①MySQL8.0不支持PASSWORD、ENCODE、DECODE函数</p>
 <p>②SHA加密算法比MD5更加安全。</p>
+<p>③SHA加密算法、MD5加密算法加密结果<code>不可逆</code></p>
+<h2 id="6、MySQL信息函数"><a href="#6、MySQL信息函数" class="headerlink" title="6、MySQL信息函数"></a>6、MySQL信息函数</h2><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VERSION()</td>
+<td>返回当前MySQL的版本号</td>
+</tr>
+<tr>
+<td>CONNECTION_ID()</td>
+<td>返回当前MySQL服务器的连接数</td>
+</tr>
+<tr>
+<td>DATABASE()，SCHEMA()</td>
+<td>返回MySQL命令行当前所在的数据库</td>
+</tr>
+<tr>
+<td>USER()，CURRENT_USER()、SYSTEM_USER()，SESSION_USER()</td>
+<td>返回当前连接MySQL的用户名，返回结果格式为“主机名@用户名”</td>
+</tr>
+<tr>
+<td>CHARSET(value)</td>
+<td>返回字符串value自变量的字符集</td>
+</tr>
+<tr>
+<td>COLLATION(value)</td>
+<td>返回字符串value的比较规则</td>
+</tr>
+</tbody></table>
 <h2 id="7、其他函数"><a href="#7、其他函数" class="headerlink" title="7、其他函数"></a>7、其他函数</h2><table>
 <thead>
 <tr>
